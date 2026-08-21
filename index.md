@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "A Computational Introduction to Robotics 2025"
+title: "A Computational Introduction to Robotics 2026"
 header:
   overlay_image: "website_graphics/robo_splash.jpg"
   overlay_color: "#000"

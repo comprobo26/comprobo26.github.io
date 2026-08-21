@@ -3,18 +3,16 @@ title: "Setup Your Computing Environment"
 toc_sticky: true
 ---
 
-The teaching team will be using ROS2 Humble with Ubuntu 22.04, and we recommend you do the same.
+The teaching team will be using ROS2 Jazzy with Ubuntu 24.04, and we _strongly_ recommend you do the same. Previous versions of this class are available in ROS2 Humble and Ubuntu 22.04; please contact the teaching team if you have a strong preference for this older environment set-up.
 
 > While there are other ways to install ROS on a computer (ROS2 for Windows, ROS2 through Docker, ROS2 through Windows Subsystem for Linux, ROS1), you really, really want to use Ubuntu running via dual boot (not as a virtual machine).  We have found that while these other setups work to varying degrees, there are always little issues that will crop up that will likely get in the way of your learning.  While setting up a dual boot takes some time, you will find that the payoff is quite big (both in terms of the smoothness of your experience and in learning how to interact with a Linux environment).
 
-> Additionally, while the latest Ubuntu is 24.04 and latest stable version of ROS2 as of this offering of CompRobo is Jazzy, this release makes significant API changes for several key tools we use in this class (like Gazebo) and for which there are limited debugging resources. As Humble will be supported through 2027, we strongly recommend using Humble for the easiest interaction with existing tools, ample online community resources, and a more time-tested distro. Humble is paired with 22.04 Ubuntu, making this the reasonable choice for Linux distro for the time being.
 
+## Step 0: Setting up a Dual Boot
 
-## Setting up a Dual Boot
+How2Shout has [a nice walkthrough of setting up your computer to dual boot](https://linux.how2shout.com/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/). Note that this is a tutorial for installing 22.04 alongside Windows 10; however all the steps _will_ work for our recommended 24.04 and Windows 11+ install. If you would like another tutorial to look at, LinuxConfig [has a similar tutorial specifically for 24.04 and Windows 11](https://linuxconfig.org/how-to-install-ubuntu-alongside-windows-11-dual-boot). Note that the Olin IT group has also assembled a set of excellent [dual-boot instructions](https://wikis.olin.edu/linux/doku.php) (access to this page requires being on the network or connected via VPN).
 
-How2Shout has [a nice walkthrough of setting up your computer to dual boot](https://linux.how2shout.com/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/). Note that this is a tutorial for installing 22.04 alongside Windows 10; however all the steps _will_ work for our recommended 22.04 and Windows 11 install. Note that the Olin IT group has also assembled a set of excellent [dual-boot instructions](https://wikis.olin.edu/linux/doku.php) (access to this page requires being on the network or connected via VPN).
-
-Before starting a dual boot process, you'll want to have an Ubuntu 22.04 installer handy.  You can get an installer using the [How2Shout guide on creating a bootable installer](https://linux.how2shout.com/how-to-create-ubuntu-22-04-bootable-usb-drive-on-windows), following the [instructions set up by the Olin IT](https://wikis.olin.edu/linux/doku.php), or by using one of the thumb drives we have created for you to use. Look for them on the Neato rack in the classroom. 
+Before starting a dual boot process, you'll want to have an Ubuntu 24.04 installer handy.  You can get an installer using the [official ubuntu website documentation](https://ubuntu.com/desktop/docs/en/latest/how-to/create-a-bootable-usb-stick/#) (follow the "On Windows" section!), following the [instructions set up by the Olin IT](https://wikis.olin.edu/linux/doku.php), or by using one of the thumb drives we have created for you to use. Look for them on the Neato rack in the classroom. 
 
 A few quick notes:
 * **INSTALL OPTIONS**: When installing Ubuntu, you _should_ select the options to **Download updates** and **Install third-party software**.
@@ -22,18 +20,18 @@ A few quick notes:
 * **PARTITIONING**: When installing Ubuntu you will likely need to **shrink your Windows partition** to make room for Ubuntu.  Sometimes this can be accomplished through the Ubuntu installer, if you are not able to shrink your partition in this way, we had success using [EaseUS Partition Manager](https://www.easeus.com/partition-manager/epm-free.html). Tutorials online also suggest using Ubuntu in "Try" mode and using the `gparted` manager to modify partitions. Or you can even manage your partitions through Windows before attempting an install. If you are having a problem setting up your partitions, please send us an e-mail.
 * **SPACE ALLOCATION**: You should probably reserve about 64 GB of space for Ubuntu (if you are planning on using Ubuntu moving forward from this class, consider reserving 128 GB or more).
 
-
-*Once you have a freshly installed copy of Ubuntu 22.04, perform the next steps on this page.*
+*Once you have a freshly installed copy of Ubuntu 24.04, perform the next steps on this page.*
 
 ### Troubleshooting
-
 In previous years, a student reported an error message about needing to turn off RST to install Ubuntu.  The student was able to find a workaround.  If you have this or any other issue, please send an e-mail to someone on the teaching team.
 
 Sometimes a "black screen of death" can occur when installing Ubuntu on top of a previously used partition (for instance, if you're upgrading an existing partition). If this happens, boot to a "safe mode" through Grub ("Advanced Options for Ubuntu" and selecting the safe-mode image). It is then recommended that you enable networking, then run the dpkg utility. If this doesn't resolve the black screen of death, please send an e-mail to someone on the teaching team.
 
+Occasionally, something goes wrong with the partitioning process. The best strategy is to "reset" your Windows partition, delete any small artifact partitions, and then start again. If you continue to have partitioning issues, ensure that your BIOS configuration is correct on your computer (check the Olin IT wiki or talk to an instructor if you're not sure what this means).
 
 
-## Make Sure Your NVIDIA Card is Setup
+
+## Step 1: Make Sure Your NVIDIA Card is Setup
 
 Depending on how you installed Ubuntu (for instance, if you did not opt for third-party software to be installed), you may not have the drivers for your NVIDIA graphics card.  To check whether you have the NVIDIA drivers installed, you can run the following command in a ```terminal``` window.
 
@@ -68,31 +66,35 @@ Wed Sep 16 13:53:41 2020
 +-----------------------------------------------------------------------------+
 ```
 
-If you see a message that ``nvidia-smi`` is not installed, you can use [these instructions](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-22-04) to install it. 
+If you see a message that ``nvidia-smi`` is not installed, you can use [these instructions](https://linuxconfig.org/how-to-install-nvidia-drivers-on-ubuntu-24-04) to install it. 
 
-> Note: NVIDIA drivers on Ubuntu are notoriously finicky. If you are having trouble getting them to work, please contact the teaching team. Also note that it is _totally fine_ for the purposes of all default class activities to not have access to a GPU (although it might be nice for some of your projects). There will be some time to figure this out if it doesn't go smoothly for you the first time.
+> Note: NVIDIA drivers on Ubuntu are notoriously finicky. If you are having trouble getting them to work, please contact the teaching team. Also note that it is _totally fine_ for the purposes of all default class activities to not have access to a GPU (although it might be nice for some of your projects and for simulation-based work). There will be some time to figure this out if it doesn't go smoothly for you the first time.
 
-## Setup Git
+
+
+
+## Step 2: Setup Git
 Coming into this class, you likely have already used some form of git version control, and have created a GitHub account. For a seamless experience using git and GitHub for this class, we recommend taking a moment to ensure you have added your GitHub credentials to your system and setting up SSH keys. 
 * Setting up your GitHub account on Ubuntu: [this tutorial from the GitHub docs](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) will walk you through the main steps
 * Setting up SSH keys: [this tutorial from the GitHub docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) will walk you through generating a new SSH key for your Ubuntu machine and adding it to your GitHub account.
 
 
-## Install ROS Humble
 
-Follow [this tutorial](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) (make sure to install ``ros-humble-desktop`` rather than ``ros-humble-ros-base``).  **Once you get to the section ``Next Steps'', you can come back to this document (don't follow those instructions in the tutorial).**
+## Step 3: Install ROS Jazzy
 
-In addition to the ``ros-humble-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the Neato simulator.
+Follow [this tutorial](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html) (make sure to install ``ros-jazzy-desktop`` rather than ``ros-jazzy-ros-base``).  **Once you get to the section ``Next Steps'', you can come back to this document (don't follow those instructions in the tutorial).**
+
+In addition to the ``ros-jazzy-desktop`` package, you should install these additional packages to allow you to stream video from the Neatos and interact with the Neato simulator.
 
 {% include codeHeader.html %}
 ```bash
-sudo apt-get update && sudo apt-get install -y ros-humble-gazebo-ros-pkgs \
-	ros-humble-nav2-bringup \
-	ros-humble-navigation2 \
-	ros-humble-camera-info-manager \
-	ros-humble-cartographer-ros \
-	ros-humble-cartographer \
-	ros-humble-gscam \
+sudo apt-get update && sudo apt-get install -y ros-jazzy-gz-ros-pkgs \
+	ros-jazzy-nav2-bringup \
+	ros-jazzy-navigation2 \
+	ros-jazzy-camera-info-manager \
+	ros-jazzy-cartographer-ros \
+	ros-jazzy-cartographer \
+	ros-jazzy-gscam \
 	git \
 	python3-colcon-common-extensions \
 	gstreamer1.0-plugins-good \
@@ -109,18 +111,19 @@ sudo apt-get update && sudo apt-get install -y ros-humble-gazebo-ros-pkgs \
 	hping3
 ```
 
-## Setup your Workspace with the Neato Packages
 
-Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html).  
+## Step 4: Setup your Workspace with the Neato Packages
 
-> Note: if you are trying to run this in a VM with an Apple Silicon Mac, you can try (again, not supported officially) the steps below but replace the line where you checkout the ``neato_packages`` with ``git clone -b no_gazebo https://github.com/comprobo25/neato_packages``.
+Next, you'll be creating a workspace, downloading the packages required to connect to the Neato, and building those packages.  You'll be learning more about what's going on in these steps later in the course, but if you are curious see [this ROS tutorial](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html).  
+
+> Note: if you are trying to run this in a VM with an Apple Silicon Mac, you can try (again, not supported officially) the steps below but replace the line where you checkout the ``neato_packages`` with ``git clone -b no_gazebo https://github.com/comprobo26/neato_packages``.
 
 {% include codeHeader.html %}
 ```bash
-source /opt/ros/humble/setup.bash
+source /opt/ros/jazzy/setup.bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone git@github.com:comprobo25/neato_packages.git
+git clone git@github.com:comprobo26/neato_packages.git
 cd ~/ros2_ws
 colcon build --symlink-install
 source ~/ros2_ws/install/setup.bash
@@ -140,7 +143,7 @@ Edit your ``~/.bashrc`` file so that your workspace is correctly loaded whenever
 
 {% include codeHeader.html %}
 ```bash
-echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 ```
 
@@ -173,7 +176,8 @@ Make sure ``hping3`` is setup so you can stream video from the robot.
 sudo setcap cap_net_raw+ep /usr/sbin/hping3
 ```
 
-## Working with VSCode (Optional)
+
+## Step 5: Working with VSCode (Optional)
 
 We'll be using VSCode when doing demonstrations in class.  If you'd like to use VSCode, you can use the [VSCode Ubuntu install instructions](https://code.visualstudio.com/docs/setup/linux) and then go through the steps in [Configure VS Code for ROS2](https://www.youtube.com/watch?v=hf76VY0a5Fk).
 

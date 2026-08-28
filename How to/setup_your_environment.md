@@ -88,7 +88,7 @@ In addition to the ``ros-jazzy-desktop`` package, you should install these addit
 
 {% include codeHeader.html %}
 ```bash
-sudo apt-get update && sudo apt-get install -y ros-jazzy-gz-ros-pkgs \
+sudo apt update && sudo apt install -y ros-jazzy-ros-gz \
 	ros-jazzy-nav2-bringup \
 	ros-jazzy-navigation2 \
 	ros-jazzy-camera-info-manager \
@@ -129,7 +129,7 @@ colcon build --symlink-install
 source ~/ros2_ws/install/setup.bash
 ```
 
-You will probably get a warning when you execute this build that looks like this.
+You might get a warning when you execute this build that looks like this.
 ```bash
 --- stderr: neato_node2                   
 /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
@@ -164,10 +164,10 @@ Install ``Sckit-Build`` and ``OpenCV``.
 
 {% include codeHeader.html %}
 ```bash
-pip3 install scikit-build
-pip3 install opencv-python
+pip3 install --break-build-systems scikit-build
+pip3 install --break-build-systems opencv-python
 ```
-> With Python 3.12+ you may encounter an "external packages" error when performing this step. In this instance, we suggest adding the ``--break-build-systems`` flag in order to force a system-wide install of these packages. However, in your future work, we recommend learning more about virtual environments (``venv``, ``anaconda`` and more!) which is increasingly the workflow suggested for Python projects.
+> Without the `break-build-systems` flag, with Python 3.12+ you will encounter an "external packages" error when performing this step. In general, it is not great practice to break your build systems (but since we are using ROS2 natively, we will be making an exception in this case). For your future work, we recommend learning more about virtual environments (``venv``, ``anaconda`` and more!) which is increasingly the workflow suggested for pure Python projects.
 
 Make sure ``hping3`` is setup so you can stream video from the robot.
 
@@ -179,6 +179,6 @@ sudo setcap cap_net_raw+ep /usr/sbin/hping3
 
 ## Step 5: Working with VSCode (Optional)
 
-We'll be using VSCode when doing demonstrations in class.  If you'd like to use VSCode, you can use the [VSCode Ubuntu install instructions](https://code.visualstudio.com/docs/setup/linux) and then go through the steps in [Configure VS Code for ROS2](https://www.youtube.com/watch?v=hf76VY0a5Fk).
+We'll be using VSCode when doing demonstrations in class.  If you'd like to use VSCode, you can use the [VSCode Ubuntu install instructions](https://code.visualstudio.com/docs/setup/linux) and then go through the steps in [Configure VS Code for ROS2](https://www.youtube.com/watch?v=hf76VY0a5Fk). I recommend using "Modern Dark" as your color scheme, and to use the latest recommended plugins for ROS/ROS2, Python, C/C++, and CMake.
 
 There is documentation on running [ROS code in the debugger under VSCode](https://github.com/ms-iot/vscode-ros/blob/master/doc/debug-support.md), but you might have better luck using the default Python debugging profile.

@@ -35,7 +35,7 @@ feature_row_robot:
     excerpt: "The documentation describes both how to connect to the the physical robot or a simulator and how to build your own customized Neato.
 
     ### Student Facing Documentation\n
-    * [Setting up Your Computer](How to/setup_your_environment), [Using the Neatos](How to/use_the_neatos), and [Using the Turtlebot 4](How to/use_the_turtlebot4)\n
+    * [Setting up Your Computer](How to/setup_your_environment), [Using the Neatos](How to/use_the_neatos), and [Using the Simulator](How to/use_the_simulator)\n
     * [Useful Resources](useful_resources) and [Sample Code](Sample_code/sample_code)\n
 
     ### Teaching Team Documentation\n

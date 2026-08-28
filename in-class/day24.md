@@ -13,6 +13,9 @@ toc_data:
   - title: Final Project Studio 
     link: in-class/day24/#final-project-studio
 ---
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Kinematics Speed Lesson (optional)
 * Centralized/Decentralized Planning Speed Lesson (optional)

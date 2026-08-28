@@ -12,6 +12,9 @@ toc_data:
     link: in-class/day13/#machine-vision-ideation
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 
 * Localization Project Share-out

@@ -9,6 +9,10 @@ toc_data:
   - title: Final Project Studio 
     link: in-class/day26/#final-project-studio
 ---
+
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Final Project Studio
 

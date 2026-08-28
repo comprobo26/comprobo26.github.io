@@ -12,6 +12,9 @@ toc_data:
     link: in-class/day20/#final-project-ideation
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Overview: What's Ahead
 * Work on Project Proposals

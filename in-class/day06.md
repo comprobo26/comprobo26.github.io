@@ -12,6 +12,9 @@ toc_data:
     link: in-class/day06/#conceptual-introduction-to-the-particle-filter
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * RoboBehaviors Debrief
 * An Introduction to State Estimation

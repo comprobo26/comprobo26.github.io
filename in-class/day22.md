@@ -11,6 +11,9 @@ toc_data:
   - title: Final Project Studio 
     link: in-class/day22/#final-project-studio
 ---
+
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
 ## Today
 * CA Lecture: Namespaces, Launch Files, and Project Development Advice
 * Final Project Studio

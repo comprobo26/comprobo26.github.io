@@ -12,6 +12,8 @@ toc_data:
     link: in-class/day01/#sensory-motor-loops-legacy-material-if-you-are-interested
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
 ## Today
 
 * Intro to CompRobo (<a href="https://docs.google.com/presentation/d/1T-gY0nTB7Gx2i21T01CFSnopaKo8oz7pxvk4z9us4Jk/edit?usp=sharing">slides</a>)

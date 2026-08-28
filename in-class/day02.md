@@ -15,6 +15,9 @@ toc_data:
 
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * First Day Debrief
 * [About Modern Robotics: A Glossary](https://docs.google.com/presentation/d/1pXEyKQvti7Vg1wR6l2MFnddXxUgTpYjwVJnR7uMjqlo/edit?usp=sharing)

@@ -14,6 +14,9 @@ toc_data:
     link: in-class/day10/#breakout-sessions
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Broader Impacts Applications II Discussions
 * Mini-Lecture on Bayesian Estimation

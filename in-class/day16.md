@@ -12,6 +12,9 @@ toc_data:
     link: in-class/day16/#camera-calib
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * CA Lecture: 3D Dynamic Reconstruction for Soft Corals with Light Fields
 * Camera Calibration (For Your Consideration)

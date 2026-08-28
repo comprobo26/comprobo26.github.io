@@ -11,6 +11,10 @@ toc_data:
   - title: Final Project Studio 
     link: in-class/day25/#final-project-studio
 ---
+
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Sociotechnical Systems
 * Final Project Studio

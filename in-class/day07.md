@@ -18,6 +18,9 @@ toc_data:
     link: in-class/day07/#project_kickoff
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today 
 
 * Frameworks for Challenging Conversations

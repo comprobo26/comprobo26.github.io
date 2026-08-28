@@ -12,6 +12,9 @@ toc_data:
     link: in-class/day21/#final-project-studio
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Human-Robot Interactions: Robots in Public
 * Final Project Studio

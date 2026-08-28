@@ -14,6 +14,9 @@ toc_data:
     link: in-class/day03/#going-further
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Follow-Up on Nodes and Connecting to a Neato
 * Writing Sensory-Motor Loops for a Neato

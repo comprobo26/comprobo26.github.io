@@ -10,6 +10,9 @@ toc_data:
     link: in-class/day15/#keypoints-and-descriptors
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Keypoints, Descriptors, and Keypoint Matching
 * Studio Time

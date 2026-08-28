@@ -16,6 +16,9 @@ toc_data:
     link: in-class/day08/#observation-models
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 
 * Applications Discussion I: The Intersection of AI and Robotics

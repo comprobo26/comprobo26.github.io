@@ -7,6 +7,10 @@ toc_data:
   - title: For Next Time
     link: in-class/day18/#for-next-time
 ---
+
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Studio Time
 

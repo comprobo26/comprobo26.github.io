@@ -12,6 +12,9 @@ toc_data:
     link: in-class/day11/#extensions-to-the-particle-filter
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Debugging Your Particle Filter + Extensions
 * Studio Time

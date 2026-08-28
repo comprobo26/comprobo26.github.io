@@ -12,6 +12,9 @@ toc_data:
     link: in-class/day14/#neato-soccer
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Application III Discussion: Human-Robot Collaboration: Search and Rescue
 * Neato Soccer + Project Proposal Check-Ins + Studio

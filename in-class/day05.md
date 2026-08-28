@@ -14,6 +14,9 @@ toc_data:
     link: in-class/day05/#finite-state-machines
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Brainstorming Robot Debugging Strategies
 * Coordinate Frames and Coordinate Transforms in Robotics

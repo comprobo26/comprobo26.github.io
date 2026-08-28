@@ -14,6 +14,9 @@ toc_data:
     link: in-class/day04/#proportional-control
 ---
 
+
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
 ## Today
 * What are Broader Impacts?
 * ROS and Threading

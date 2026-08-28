@@ -11,6 +11,10 @@ toc_data:
   - title: Image Segmentation Basics
     link: in-class/day17/#sfm-basics
 ---
+
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 
 * Broader Impacts Phase 2 Discussions

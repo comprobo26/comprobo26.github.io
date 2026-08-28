@@ -11,6 +11,10 @@ toc_data:
   - title: Semester Debrief
     link: in-class/day27/#semester-debrief
 ---
+
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Final Project Showcase
 * Semester Debrief

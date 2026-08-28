@@ -14,6 +14,9 @@ toc_data:
     link: in-class/day12/#machine-vision-kickoff
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Beyond Particle Filtering Mini-Lecture (optional)
 * Studio Time

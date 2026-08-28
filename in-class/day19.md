@@ -12,6 +12,9 @@ toc_data:
     link: in-class/day19/#final-project-kickoff
 ---
 
+# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
+
+
 ## Today
 * Machine Vision Showcase
 * Final Project Kick-Off

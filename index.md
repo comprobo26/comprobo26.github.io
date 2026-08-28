@@ -94,7 +94,7 @@ feature_row_final_project:
     ### Supporting Documents
 
 * [Final Project Assignment Document](assignments/final_project)\n
-* [2024 Final Projects Showcase](final_project_showcase)"
+* [Final Projects Legacy Showcase](final_project_showcase)"
 
 ---
 

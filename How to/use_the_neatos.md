@@ -84,7 +84,7 @@ Startup `rviz2` in a new terminal.
 
 {% include codeHeader.html %}
 ```bash
-rqt
+rviz2
 ```
 
 Add the `/scan` topic for visualization. You should see little red dots appear that represent your laser scan!

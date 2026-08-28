@@ -41,8 +41,7 @@ I know I am really interested in robot systems, and I'm working on determining w
 ```
 
 
-
-### Phase 1 --- Revise Learning Goals
+<!-- ### Phase 1 --- Revise Learning Goals
 Take a moment to [review your learning goals](https://canvas.olin.edu/courses/942/assignments/16081) from earlier in this semester. With three projects now complete and the final project kicking off, consider:
 
 * **Do these goals align or resonate with your experiences in CompRobo so far?** If so, are there new goals you would like to pursue looking ahead? If not, are there changes to the goals you would like to make or resolutions regarding the final project you'd like to establish?
@@ -58,4 +57,4 @@ For this phase, please [submit a tracked-changes edit of your initial learning g
 ### Phase 2 --- Assess Learning Goals
 In the final phase of this assignment, please assess how you have [met or addressed your learning goals](https://canvas.olin.edu/courses/942/assignments/16081). You will be scoring yourself out of 50 points, using your assessment plan as a guide. 
 
-Please submit a final copy of your learning goals, and a rubric matching your assessment plan with scores and commentary supporting your assessment (link TBA). You may allocate point totals in whatever way you deem fair and a reasonable interpretation of your goals, and your score + commentary should note your strengths, areas of possible improvement, and notes for any point deductions. The score you assign yourself will be applied directly to this assignment (unless there is concern from the teaching team about the score allocation, in which case a brief dialog will be sought to confirm the score before grade assignment).
+Please submit a final copy of your learning goals, and a rubric matching your assessment plan with scores and commentary supporting your assessment (link TBA). You may allocate point totals in whatever way you deem fair and a reasonable interpretation of your goals, and your score + commentary should note your strengths, areas of possible improvement, and notes for any point deductions. The score you assign yourself will be applied directly to this assignment (unless there is concern from the teaching team about the score allocation, in which case a brief dialog will be sought to confirm the score before grade assignment). -->

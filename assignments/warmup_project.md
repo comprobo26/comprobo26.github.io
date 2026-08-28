@@ -6,15 +6,16 @@ toc_h_max: 3
 
 # Project Overview
 
-__Your goal in this project will be to program the Neato to execute a number of behaviors (e.g., teleop, driving a trajectory of a pre-defined shape, wall-following, people-following, and obstacle avoidance) within a finite-state machine.__ 
+__Your goal in this project will be to program the Neato to execute a number of behaviors (e.g., driving a trajectory of a pre-defined shape, wall-following, people-following, and obstacle avoidance) within a finite-state machine.__ 
 
 In the process of implementing these behaviors, you will also learn about tools and strategies for debugging robot programs.  You are encouraged to be as creative as possible in this assignment; this page will list several specific behaviors -- you are welcome to implement some, all, or none of these behaviors for your particular finite state machine.
 
 You should be spending about *fifteen hours* on this assignment, so if you find yourself breezing through the required portions, we recommend that you push yourself a bit further! If you find that you are stuck or having a difficult time making progress, consider sending an [e-mail to the teaching team](mailto:vpreston@olin.edu) or coming to office hours. For everyone, feel free to post a discussion on the course Discord (even if you are not hitting roadblocks, sometimes it is a great idea to post what is working well for you so that you might trade ideas with your peers)! And please feel welcome to hang out around MAC306 (which you will need to do when working with the robots) as this will be the epicenter of all things CompRobo!
 
-**Project Due Date**: September 23rd, 7PM ([Canvas description](https://canvas.olin.edu/courses/942/assignments/16078))
-
-**In-Class Shareout**: September 25th ([Canvas description](https://canvas.olin.edu/courses/942/assignments/16079))
+**In-Class Shareout**: September 21st ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20110))
+**Project Due Date**: September 22nd, 7PM ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20109))
+**Individual Survey**:
+**Ethics Screen**:
 
 ## Learning Goals
 
@@ -37,19 +38,19 @@ We invite you to write at least one more _basic_ or _advanced_ behavior, then co
 
 ## Information Sharing
 
-We want to encourage resource sharing and collaborative learning as much as possible. Beyond posting on Discord, consider adding knowledge for posterity though [this Google Doc](https://docs.google.com/document/d/1x3NjmOhbd8oq020Vt0etsZLnNtvLpK2AasJFirAi96Q/edit?usp=sharing) which we've already populated with some tips and tricks!
+We want to encourage resource sharing and collaborative learning as much as possible. Beyond posting on Discord, consider adding knowledge for posterity through [this Google Doc](https://docs.google.com/document/d/13yDdGVph39BK98i6aDM_2vxva4ddmW7-FKlH9Dw4WIo/edit?usp=sharing) which we've already populated with some tips and tricks!
 
 ## Logistics (and What You're Turning In)
-You may work on this assignment with one other person from the class.  You will be turning in your project (both code + writeup) via a Github link submitted [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078); while you're in the midst of development, please share your team and Github repo link on [this spreadsheet](https://docs.google.com/spreadsheets/d/1emh5tDNNhTiepzegO7q-Sy2jM3CaAhRC5oynsSDrPUY/edit?usp=sharing) for the teaching team. **Please note** -- a detailed rubric for the assignment is provided in the Canvas link; please look at this closely!
+You may work on this assignment with 1-2 folks from the class. You will be turning in your project (both code + writeup) via a Github link submitted [on Canvas](https://canvas.olin.edu/courses/1070/assignments/20109); while you're in the midst of development, please add yourself to a team on Canvas! **Please note** -- a detailed rubric for the assignment is provided in the Canvas link; please look at this closely!
 
-At the end of this project, we will have a share-out where you can show off something you did, or share a key piece of information you've learned along the way! Add it to <a href="https://docs.google.com/presentation/d/1Aa63PUPe-afBzpv647Qvuj_C0xe-lIBMh9_3bc42kvs/edit?usp=sharing">this shared Google Slides presentation</a> by the in-class sharing period.
+At the end of this project, we will have a share-out where you can show off something you did, or share a key piece of information you've learned along the way! Add it to <a href="https://docs.google.com/presentation/d/1c2C2l3-VuN2uG3lVkVtfvAoGm75RxduxorTsenCKqL4/edit?usp=sharing">this shared Google Slides presentation</a> by the in-class sharing period.
 
 You may find the [resources page](../useful_resources) useful for completing this assignment. We have included several extensions to the basic project that we hope will keep students that are coming in with more background knowledge (whether that be robotics knowledge or programming knowledge) engaged.
 
 
 # Your ROS2 Package: Code Structure and Writeup
 
-Your code should be placed in a ROS package called *ros_behaviors_fsm*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS2 tutorial on creating a package](https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html). If you are working purely in Python (the vast majority of the class), follow the instructions for ``Python``.  If you are working entirely in C++ or a combination of C++ and Python, follow the instructions for ``CMake``.  To mix C++ and Python, you will have to jump through a few hoops.  See this [guide on combining C++ and Python in one ROS2 Package](https://roboticsbackend.com/ros2-package-for-both-python-and-cpp-nodes/).  Alternatively, you can turn in two ROS packages (one for C++ nodes and one for Python nodes).
+Your code should be placed in a ROS package called *ros_behaviors_fsm*. If you want to structure your code with more than one package, make sure to document the additional packages in your project writeup.  If you are unsure how to create a ROS package, [consult the ROS2 tutorial on creating a package](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html). If you are working purely in Python (the vast majority of the class), follow the instructions for ``Python``.  If you are working entirely in C++ or a combination of C++ and Python, follow the instructions for ``CMake``.  To mix C++ and Python, you will have to jump through a few hoops.  See this [guide on combining C++ and Python in one ROS2 Package](https://roboticsbackend.com/ros2-package-for-both-python-and-cpp-nodes/).  Alternatively, you can turn in two ROS packages (one for C++ nodes and one for Python nodes).
 
 Here are some files you may generate as part of this assignment. You will likely deviate from this exactly, and that's fine, but hopefully this is a useful guide.
 
@@ -107,13 +108,13 @@ Here are some writeups that are particularly solid.  We hope that these might ge
 Halfway through the project you should have the following parts of the project done:
 * Simple visualizations using rviz
 * Test drive bag file
-* All in-class developed behaviors (e.g., teleop, drive square, wall following)
+* All in-class developed behaviors (e.g., drive square, wall following)
 * Skeleton code of your self-developed behavior(s)
 * A started draft of your write-up
 
 # Using Robots and Simulators
 
-You can use a combination of the simulated Neato and real Neato during your development cycle, however, **before the end of the project you should ensure that your code works on the physical Neato**. The documentation on how to use the physical and simulated robots, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a href="../How to/use_the_neatos">how to use the neatos page</a>.
+You can use a combination of the simulated Neato and real Neato during your development cycle, however, **before the end of the project you should ensure that your code works on the physical Neato**. The documentation on how to use the physical and simulated robots, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a href="../How to/use_the_neatos">how to use the neatos page</a> and <a href="../How to/use_the_simulator">how to use the simulator page</a>.
 
 # Getting Started: Robotics Development and Debugging Tools
 Before jumping in to programming robot behaviors, this activity is designed to help you get your development workflow set-up and assist you with the data-recording steps + write-up documentation evidence you'll want to be using later. 
@@ -164,6 +165,8 @@ $ ros2 bag play path-to-bag-file
 > Note: make sure your path to the bag file points to the bag directory (rather than either the metadata or the messages file located within said directory).
 
 _Please push your, hopefully not too large, bag files to your repo in a subdirectory called **bags** as you complete this project.  Each bag file is represented as a directory containing the actual messages as well as some metadata.  If the bag file directory is more than 50 megabytes or so, something is likely wrong (e.g., you captured the uncompressed images on mistake).  For our convenience please name the bag something that allows us to determine which part of the assignment it corresponds to._
+
+
 
 # Behavior Programming: Neatos Take On The World
 This section describes the various behaviors we will be implementing in class or suggest as a starting point for your own creativity.
@@ -255,6 +258,7 @@ Whatever method you choose, you must visualize the detected wall using rviz.  T
 
 Using the rosbag instructions from earlier, record a demo of your wall follower in action.  Make sure that when you record your bag file you are also recording the wall visualization from the previous step.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
+
 ### Person Following (For Your Consideration)
 
 Pretend your Neato is your robot pet and get it to follow you around! The intended behavior is that you can walk in front of the Neato and it will follow your movements while maintaining a specified following distance.
@@ -285,6 +289,7 @@ Whatever method you choose, you must visualize the detected person using rviz. 
 
 Using the rosbag instructions from earlier, record a demo of your person follower in action.  Make sure that when you record your bag file you are also recording the visualization of the tracked location of the person from the previous step.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
+
 ### Obstacle Avoidance (For Your Consideration)
 
 For this part you should program the Neato to move forward while reactively avoiding obstacles that block its path. This is different than simple collision avoidance because the robot should *keep going* after it encounters an obstacle, and simply modify its path.
@@ -310,6 +315,8 @@ While not required, we recommend that you choose a visualization strategy that h
 #### Bag Recording
 
 Using the rosbag instructions from earlier, record a demo of your obstacle avoider in action.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
+
+
 
 # Combining Multiple Behaviors Using Finite-State Control
 
@@ -338,6 +345,7 @@ While not required, we recommend that you choose a visualization strategy that h
 Using the rosbag instructions from earlier, record a demo of your finite-state controller in action.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
 
+
 # Other Ideas for Going Beyond
 
 ## Working in C++
@@ -349,10 +357,11 @@ If you are interested in learning C++ through this course, you can do so in this
 The ROS actions framework is a great tool for managing behaviors like the ones you implemented in this project.  Consider reading [the actions documentation](https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html), and incorporating it into your code.
 
 
+
 # Tips, Tricks, and Words of (Pseudo?) Wisdom
 
 * Dealing with Quaternions.  Quaternions are a way to parameterize a 3-d orientation.  ROS uses them to supply things like the relationship between the axes of two coordinate frames (e.g., in the ``tf2`` module).  I have put together [an example of converting form quaternions to Euler angles](https://github.com/comprobo24/class_activities_and_resources/blob/main/sample_node_architectures/sample_node_architectures/get_odom_rpy.py).  For the Neato we are chiefly concerned with the yaw angle (as the Neato is confined to the ground).
 * There is now a general [troubleshooting page](../How to/troubleshoot).
-* We want to create an environment in this course where folks contribute interesting things they've learned to the rest of the class.  To accomplish this, we've created <a href="https://docs.google.com/document/d/15u9fvz5TsuPaSnvE1h_dyiVO2Rk7YTIyNweKpGGwuTE/edit?usp=sharing">a Google doc that we can use for collecting useful tips for this assignment</a>.  We've already prepopulated the document with useful information on calculating angle differences; converting a ROS pose to x, y, and yaw; and project a laser scan into the odometry frame.
+* We want to create an environment in this course where folks contribute interesting things they've learned to the rest of the class.  To accomplish this, we've created <a href="https://docs.google.com/presentation/d/1c2C2l3-VuN2uG3lVkVtfvAoGm75RxduxorTsenCKqL4/edit?usp=sharing">a Google doc that we can use for collecting useful tips for this assignment</a>.  We've already prepopulated the document with useful information on calculating angle differences; converting a ROS pose to x, y, and yaw; and project a laser scan into the odometry frame.
 * When programming robots you have to get used to the idea that your code is never "bug free" in the same way that an implementation of a sorting algorithm can be bug free (there is always more work to do to make your robot code more robust to various scenarios).
 * When your robot is not doing what you expect it to, you are often faced with the decision of spending time tweaking your code to get it to work or spending time writing code to visualize / understand what your code is doing.  Students are often comfortable with the former (tweaking) and hesitant to pursue the latter (visualizing).  We advise you to push yourself to work on visualization and other means to understand what your code is doing.  You will find that for robotics programming, these visualizations will prove invaluable for rooting out bugs and finding ways to improve your code. 

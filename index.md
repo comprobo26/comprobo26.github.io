@@ -73,7 +73,8 @@ feature_row_robots_society:
 
     ### Supporting Documents
 
-* [3-Part Broader Impacts Project](assignments/broader_impacts)\n"
+* [3-Part Broader Impacts Project](assignments/broader_impacts)\n
+* [Ethics Screen](How to/ethics_screening_tool)\n"
 
 feature_row_computer_vision_project:
   - image_path: website_graphics/keypoint_matching.png

@@ -5,10 +5,6 @@ toc_sticky: true
 
 This document will help you launch and use Neato simulation tools used in this class.  Before going through these instructions, make sure that you have already <a href="../How to/setup_your_environment">setup your computing environment</a>. This is a good page to use to test your setup if you aren't near a Neato!
 
-<p align="center">
-<img alt="screenshot of a Neato in an empty simulated environment" src="../website_graphics/neato_gazebo.png"/>
-</p>
-
 We will use the simulator for in-class activities and as part of project development workflow. Simulation is an incredibly useful development tool, since deploying on robots can be _expensive_ in the real world. Practicing running, designing, and using simulation tools can be a powerful skill in industry, and can be a learning outcome you can focus on for this class.
 
 # What is a Robot Simulator?
@@ -40,7 +36,7 @@ ros2 launch neato2_gazebo empty_world.py
 <p>If all went well, you will see a bunch of output stream by and a visualization that looks like the following.</p>
 
 <p align="center">
-<img alt="screenshot of a Neato in the simulated obstacle course" src="../website_graphics/gauntlet_gazebo.png"/>
+<img alt="screenshot of a Neato in an empty simulated environment" src="../website_graphics/neato_gazebo.png"/>
 </p>
 
 To launch a robot in an obstacle course environment, you can run the following command:

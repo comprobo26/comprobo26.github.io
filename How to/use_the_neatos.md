@@ -42,6 +42,7 @@ Plug the battery pack into the Raspberry Pi. If you are using one of the cables 
 
 _Wait about 1 minute for the robot screen to turn on_. If the robot screen doesn't turn on in a minute, or if the green LED lights on the Raspberry Pi fail to flash, please alert an instructor.
 
+At the end of this step, you should have a Neato that has the following parts with a screen that is working:
 <p align="center">
 <img alt="a picture of a neato in the on state" src="../website_graphics/neato_with_battery.jpg" width="40%"/>
 </p>
@@ -223,14 +224,11 @@ There is nothing elegant about this: just separate the connector from the Neato 
 
 ## Step 3: Put Away Your Toys
 
-Place the Neato back on the Neato rack. Connect the USB battery pack up to the charger. Connect the Neato battery to the charger (taking care to watch the orientation of the plug and that the red light comes on). If there are no charging ports available, please place your batteries in the "Needs Charged" area of the carts. 
+Place the Neato back on the Neato rack. Connect the USB battery pack up to the charger. Connect the Neato battery to the charger (taking care to watch the orientation of the plug and that the red light comes on). If there are no charging ports available, please queue your batteries for charging. 
 
 
 <p align="center">
-<img alt="a picture of the Botvac's charger" src="../website_graphics/neato_botvac_charger.jpg" width="40%"/>
-</p>
-<p align="center">
-<i>The BotVac charger (notice the lip on the bottom)</i>
+<img alt="a picture of the Neato charging cart" src="../website_graphics/neato_charging_cart.jpg" width="40%"/>
 </p>
 
 
@@ -260,4 +258,8 @@ Solution: Assuming the Pi display is at the screen showing the IP address, press
 Likely cause: You or the Raspberry Pi are not connected to the OLIN_ROBOTICS network.
 
 Solution: Check that you are connected to the network. Check that the Pi is connected to the network. Try to `ping` the IP address of the Raspberry Pi. If this all fails, then there might be something wrong with the network device on the Pi; please alert an instructor.
+
+Other cause: The robot base is not on.
+
+Solution: Make sure to press the Neato HOME button and ensure that the LED light turns green around the button, and that the screen turns on. Try connecting again while the Neato screen is on.
 

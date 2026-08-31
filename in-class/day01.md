@@ -51,7 +51,7 @@ To kick-off these discussions, and to jumpstart your thinking on the first phase
 4. What do you think is the most beneficial _application_ of robotics technology? Why?
 
 ### A CompRobo Ethics Screening Tool
-In this class, we will grapple with broader impacts in our discussions and projects. To ground ourselves, we'll be using an _ethics screening tool_ to guide our project development work. Let's have a look at <a href="../How to/ethics_screening">our screening tool</a> for this semester to start to familiarize ourselves as we head into our projects!
+In this class, we will grapple with broader impacts in our discussions and projects. To ground ourselves, we'll be using an _ethics screening tool_ to guide our project development work. Let's have a look at <a href="../How to/ethics_screening_tool">our screening tool</a> for this semester to start to familiarize ourselves as we head into our projects!
 
 With your same groups, please consider:
 

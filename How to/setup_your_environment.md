@@ -25,9 +25,24 @@ A few quick notes:
 ### Troubleshooting
 In previous years, a student reported an error message about needing to turn off RST to install Ubuntu.  The student was able to find a workaround.  If you have this or any other issue, please send an e-mail to someone on the teaching team.
 
+Oddities, like the use of BitLocker or some BIOS settings, can impact the install. Be sure to check all of these settings in both Windows and your BIOS if you're having trouble generating your partitions.
+
 Sometimes a "black screen of death" can occur when installing Ubuntu on top of a previously used partition (for instance, if you're upgrading an existing partition). If this happens, boot to a "safe mode" through Grub ("Advanced Options for Ubuntu" and selecting the safe-mode image). It is then recommended that you enable networking, then run the dpkg utility. If this doesn't resolve the black screen of death, please send an e-mail to someone on the teaching team.
 
 Occasionally, something goes wrong with the partitioning process. The best strategy is to "reset" your Windows partition, delete any small artifact partitions, and then start again. If you continue to have partitioning issues, ensure that your BIOS configuration is correct on your computer (check the Olin IT wiki or talk to an instructor if you're not sure what this means).
+
+In 2026, it was noted that the recent Olin hardware (Dell Pro Max 16/MC16250) WIFI adapter is not, by default, installed as a binary when creating the Ubuntu partition. You may receive a warning like `No WiFi Adapter Detected`. If the Ubuntu installer can access the internet some other way (e.g. via ethernet or an external WiFi adapter) during initial installation, it'll download the required drivers and everything will be fine. The best way to solve this problem is to avoid it entirely, that is, to run the installer while plugged into Ethernet. If Not: If, after Ubuntu installation, there's no WiFi adapter detected in Settings or the WiFi menu is inaccessible, some extra firmware files must be placed in /lib/firmware. 
+
+Get the [following zip archive](https://canvas.olin.edu/courses/1070/pages/wifi-adapter-files) onto the computer via thumbdrive or Ethernet, then run something like this:
+
+{% include codeHeader.html %}
+```bash
+unzip riv-extra-wifi-files.zip
+cd riv-extra-wifi-files
+sudo cp intel/iwlwifi/* /lib/firmware
+```
+
+Then restart the computer. The WiFi card should then be detected.
 
 
 
@@ -164,10 +179,10 @@ Install ``Sckit-Build`` and ``OpenCV``.
 
 {% include codeHeader.html %}
 ```bash
-pip3 install --break-build-systems scikit-build
-pip3 install --break-build-systems opencv-python
+pip3 install --break-system-packages scikit-build
+pip3 install --break-system-packages opencv-python
 ```
-> Without the `break-build-systems` flag, with Python 3.12+ you will encounter an "external packages" error when performing this step. In general, it is not great practice to break your build systems (but since we are using ROS2 natively, we will be making an exception in this case). For your future work, we recommend learning more about virtual environments (``venv``, ``anaconda`` and more!) which is increasingly the workflow suggested for pure Python projects.
+> Without the `break-systems-packages` flag, with Python 3.12+ you will encounter an "external packages" error when performing this step. In general, it is not great practice to break your build systems (but since we are using ROS2 natively, we will be making an exception in this case). For your future work, we recommend learning more about virtual environments (``venv``, ``anaconda`` and more!) which is increasingly the workflow suggested for pure Python projects.
 
 Make sure ``hping3`` is setup so you can stream video from the robot.
 

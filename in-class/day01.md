@@ -12,8 +12,6 @@ toc_data:
     link: in-class/day01/#sensory-motor-loops-legacy-material-if-you-are-interested
 ---
 
-# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
-
 ## Today
 
 * Intro to CompRobo (<a href="https://docs.google.com/presentation/d/1gMZbWJgotnnX8KjClB0dk2_D14CQ9FQaY7FrgBZiE7w/edit?usp=sharing">slides</a>)
@@ -23,13 +21,13 @@ toc_data:
 
 * Mandatory Tasks:
 * *  Fill out <a href="https://forms.gle/DuZKTFdzZ84P7jyu6">the course entrance survey</a>
-* * <a href="../How to/setup_your_environment">Get your environment setup</a> and test it by <a href="../How_to/use_the_simulator">running the Neato simulator</a>
+* * <a href="../How to/setup_your_environment">Get your environment setup</a> and test it by <a href="../How to/use_the_simulator">running the Neato simulator</a>
 * * Go through the following ROS2 tutorials ([turtlesim and rqt](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html), [Understanding nodes](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html), [Understanding topics](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html))
 
 * Suggested Tasks:
 * * Check out and consider joining the class [Discord](https://discord.gg/nenE8M6Yx)
 * * Start thinking about <a href="../assignments/class_yoga">your course goals</a> (Due Sept 7th at 7PM)
-* * <a href="../How to/use_the_neatos">Connect a Neato</a> and <a href="../How_to/use_the_simulator">run the Neato simulator</a>.  Explore the topics that are published and see what you are able to do with them given the tools you learned about in the ROS2 tutorials.
+* * <a href="../How to/use_the_neatos">Connect a Neato</a> and <a href="../How to/use_the_simulator">run the Neato simulator</a>.  Explore the topics that are published and see what you are able to do with them given the tools you learned about in the ROS2 tutorials.
 * * Start working on <a href="../assignments/warmup_project">the RoboBehaviors and FSMs Project</a> (Due Sept 22nd at 7PM)
 * * Start thinking about <a href="../assignments/broader_impacts">what robot you might want to contemplate for the semester</a> (Due Sept 29th at 7PM)
 
@@ -51,3 +49,12 @@ To kick-off these discussions, and to jumpstart your thinking on the first phase
 3. _Suppose you are a policy-maker tasked with considering whether new laws, regulations, or guidelines on an emerging robot technology should be developed (you can pick a specific piece of tech or think about this in a more general sense)_. What would assist you in determining your policies and laws regarding robotics? Who would you want to talk to about the technology? Are there any blanket regulations or laws you would put in place around the use of robots and robotics technology?  
 
 4. What do you think is the most beneficial _application_ of robotics technology? Why?
+
+### A CompRobo Ethics Screening Tool
+In this class, we will grapple with broader impacts in our discussions and projects. To ground ourselves, we'll be using an _ethics screening tool_ to guide our project development work. Let's have a look at <a href="../How to/ethics_screening">our screening tool</a> for this semester to start to familiarize ourselves as we head into our projects!
+
+With your same groups, please consider:
+
+* Do any of these ethics screen issues resonate with an element of your discussion? Which ones? 
+* Do you encounter any issues in the ethics screen that didn't come up in your discussion, but were related? Which ones?
+* What questions do you have about the ethics screening tool?

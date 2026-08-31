@@ -6,16 +6,15 @@ toc_h_max: 3
 
 # Project Overview
 
-__Your goal in this project will be to program the Neato to execute a number of behaviors (e.g., driving a trajectory of a pre-defined shape, wall-following, people-following, and obstacle avoidance) within a finite-state machine.__ 
+__Your goal in this project will be to program the Neato to execute a number of behaviors (e.g., driving a trajectory of a pre-defined shape, wall-following, people-following, and obstacle avoidance) within a finite-state machine. The hope is to create a fun/funky/imaginative interaction with a Neato!__ 
 
 In the process of implementing these behaviors, you will also learn about tools and strategies for debugging robot programs.  You are encouraged to be as creative as possible in this assignment; this page will list several specific behaviors -- you are welcome to implement some, all, or none of these behaviors for your particular finite state machine.
 
 You should be spending about *fifteen hours* on this assignment, so if you find yourself breezing through the required portions, we recommend that you push yourself a bit further! If you find that you are stuck or having a difficult time making progress, consider sending an [e-mail to the teaching team](mailto:vpreston@olin.edu) or coming to office hours. For everyone, feel free to post a discussion on the course Discord (even if you are not hitting roadblocks, sometimes it is a great idea to post what is working well for you so that you might trade ideas with your peers)! And please feel welcome to hang out around MAC306 (which you will need to do when working with the robots) as this will be the epicenter of all things CompRobo!
 
-**In-Class Shareout**: September 21st ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20110))
+**In-Class Shareout**: September 21st, 1PM ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20110))
 **Project Due Date**: September 22nd, 7PM ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20109))
-**Individual Survey**:
-**Ethics Screen**:
+**Individual Survey**: September 22nd, 9PM ([Canvas description](https://canvas.olin.edu/courses/1070/quizzes/2973))
 
 ## Learning Goals
 
@@ -28,11 +27,11 @@ You should be spending about *fifteen hours* on this assignment, so if you find 
 
 ## Expected Outcomes
 For this project, we are asking that you develop your own **finite state machine** that combines at least **three unique behaviors**, 1 of which is self-designed outside what we will be completing in class together. For the purposes of this project, behaviors come in three flavors:
-* Fundamental: move forward, move backward, turn in place, turn in an arc, stop
-* Basic: drive in a [shape], collision avoidance
+* Fundamental: move forward, move backward, turn in place, turn in an arc, stop, drive in a [shape]
+* Basic: collision avoidance, stopping when bumped
 * Advanced: wall following, people following, obstacle avoidance
 
-We will be spending time writing the following behaviors in class: teleop (fundamental), driving in a square (basic), and wall following (advanced). 
+We will be spending time writing the following behaviors in class: driving in a square (fundamental), collision avoidance (basic), and wall following (advanced). 
 
 We invite you to write at least one more _basic_ or _advanced_ behavior, then combine three of all the behaviors your write into a finite state machine of your own design. You will submit all of your code in a Github repository (see details below) which will include a detailed write-up of your implementation.
 
@@ -72,7 +71,6 @@ ros_behaviors_fsm/test/test_pep257.py
 ros_behaviors_fsm/package.xml
 ros_behaviors_fsm/ros_behaviors_fsm
 ros_behaviors_fsm/ros_behaviors_fsm/__init__.py
-ros_behaviors_fsm/ros_behaviors_fsm/teleop.py
 ros_behaviors_fsm/ros_behaviors_fsm/drive_square.py
 ros_behaviors_fsm/ros_behaviors_fsm/finite_state_controller.py
 ros_behaviors_fsm/ros_behaviors_fsm/obstacle_avoider.py
@@ -114,7 +112,7 @@ Halfway through the project you should have the following parts of the project d
 
 # Using Robots and Simulators
 
-You can use a combination of the simulated Neato and real Neato during your development cycle, however, **before the end of the project you should ensure that your code works on the physical Neato**. The documentation on how to use the physical and simulated robots, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a href="../How to/use_the_neatos">how to use the neatos page</a> and <a href="../How to/use_the_simulator">how to use the simulator page</a>.
+You can use a combination of the simulated Neato and real Neato during your development cycle, however, **before the end of the project you should ensure that your code works on the physical Neato**. The documentation on how to use the physical and simulated robots, as well as the various topics (e.g., for accessing sensor data or sending motor commands), are documented on our <a href="../How to/use_the_neatos">how to use the Neatos page</a> and <a href="../How to/use_the_simulator">how to use the simulator page</a>.
 
 # Getting Started: Robotics Development and Debugging Tools
 Before jumping in to programming robot behaviors, this activity is designed to help you get your development workflow set-up and assist you with the data-recording steps + write-up documentation evidence you'll want to be using later. 
@@ -169,39 +167,9 @@ _Please push your, hopefully not too large, bag files to your repo in a subdirec
 
 
 # Behavior Programming: Neatos Take On The World
-This section describes the various behaviors we will be implementing in class or suggest as a starting point for your own creativity.
+This section describes the various behaviors we will be implementing in class or suggest as a starting point for your own creativity. Your goal is to create a fun interaction with a Neato using finite-state-control as an arbiter for its behaviors based on different sensory or timed inputs.
 
 ## Fundamental Behaviors
-
-### Robot Teleoperation (Teleop) (In-Class)
-
-While there is a default teleoperation program provided in ROS called ``teleop_twist_keyboard``, we suggest you try your hand at writing your own code to teleoperate the Neato. If you get really ambitious you can try using a gamepad or the mouse.
-
-Non-blocking keyboard input is surprisingly hard to do. To help, here is a skeleton program for getting the next key pressed when the focus is on the window where your program is running. The cryptic code '\x03' refers to control-c (which will exit the program).
-```python
-import tty
-import select
-import sys
-import termios
-
-def getKey():
-    tty.setraw(sys.stdin.fileno())
-    select.select([sys.stdin], [], [], 0)
-    key = sys.stdin.read(1)
-    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, settings)
-    return key
-
-settings = termios.tcgetattr(sys.stdin)
-key = None
-
-while key != '\x03':
-    key = getKey()
-    print(key)
-```
-
-_Put your teleop code in the ``ros_behavior_fsm`` subdirectory of your ``ros_behavior_fsm`` package. For consistency, please put your code in a file named ``teleop.py``.  Make sure your node is referenced in your package's ``setup.py`` file._
-
-## Basic Behaviors
 
 ### Driving in a Square or Other Shape (In-Class)
 
@@ -211,13 +179,19 @@ _Put your drive square code in the ``ros_behavior_fsm`` subdirectory of your ``r
 
 Using the rosbag instructions from earlier, record a demo of your square driving code in action.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
-### Collision Avoidance (For Your Consideration)
+## Basic Behaviors
+
+### Collision Avoidance (In-Class)
 
 As a basic safety measure, robots should have a programmable emergency stop ("E-stop") to avoid collisions. Write a ROS Node that will stop the Neato under various collision avoidance conditions, such as:
 * When the bump sensor is activated
 * When the robot is within 0.3m (or some other arbitrary distance) of an object
 * When an object appears in front of the robot
 * When the robot is on a side-swiping trajectory to an object
+
+_Put your collision avoidance code in the ``ros_behavior_fsm`` subdirectory of your ``ros_behavior_fsm`` package. For consistency, please put your code in a file named ``collision_avoidance.py``.  Make sure your node is referenced in your packages ``setup.py`` file._
+
+Using the rosbag instructions from earlier, record a demo of your collision avoidance in action.  Push your bag file to your repo in the ``bags`` subdirectory (again, use a suitable name so that we can tell which behavior it corresponds to).
 
 ## Advanced Behaviors
 

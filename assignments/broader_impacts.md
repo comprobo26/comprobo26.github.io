@@ -10,7 +10,6 @@ Robots are embodied systems, meaning that they physically interact and change th
 ```How does [this robot] affect you? the environment? society?```
 
 ## Part 1: Introspection
-**Due Sept 30, 2025**
 
 In this assignment, I'm asking you to select a robot that you'll be thinking about over the course of the semester. The definition of "robot" here can be expansive -- any technological system that can sense and physically respond to stimuli can be considered a robot for this assignment (so, an automated HVAC system is just as fair game as a Boston Dynamics Atlas as an industrial car manufacturing arm). When selecting your robot, consider the following:
 
@@ -26,15 +25,15 @@ Once you have selected your robot, create an artifact to share with the class an
 * **Introduce the robot** -- e.g., what is it called, what does it look like, who makes it?
 * **Explain the robot** -- e.g., what does it do? where does it do it? what goal does the entity that makes it have?
 * **React to the robot** -- e.g., have you encountered this robot? what feelings does it elicit from you?
-* **Assess the robot** -- e.g., how proficient is the robot at its task? can it be used for other tasks? how does it impact the places / people it interacts with?
+* **Assess the robot** -- e.g., how proficient is the robot at its task? can it be used for other tasks? how does it impact the places / people it interacts with? (you might find <a href="../How to/ethics_screening">our screening tool</a> useful here)
 
 An artifact is any physical (e.g., sticky-note canvas; sketch model), virtual (e.g., powerpoint presentation; webpage), or mixed-media object that captures your thinking and learning process as you discover more about your robot. You are free to choose any way you want to represent your literature search, media deep dive, and brainstorming, but please keep in mind that the final artifact will be reviewed by the teaching team, who will be looking for elements of introduction, explanation, reaction, and assessment.
 
 You are strongly encouraged to pull in academic literature, popular media, imagery, videos, and text-based resources as you create your artifact. **Remember to cite your sources and provide media credits when appropriate.**
 
-[To submit this assignment, upload a document containing your artifact or provide a link to your artifact (if you make a physical object, please submit image(s) or video(s) of your artifact) to Canvas](https://canvas.olin.edu/courses/822/assignments/13045). You will be assessed on completeness (2 points) and presence of each of the 4 prompts (introduction, explanation, reaction, and assessment; 2 points each) for a total of 10 points. It is expected that this assignment should take ~6-10 hrs to complete. 
+[To submit this assignment, upload a document containing your artifact or provide a link to your artifact (if you make a physical object, please submit image(s) or video(s) of your artifact) to Canvas](https://canvas.olin.edu/courses/1070/assignments/20093). You will be assessed on completeness (2 points) and presence of each of the 4 prompts (introduction, explanation, reaction, and assessment; 2 points each) for a total of 10 points. It is expected that this assignment should take ~6-10 hrs to complete. 
 
-We will then present artifacts in class; [your presentation and participation in small group discussions](https://canvas.olin.edu/courses/942/assignments/16262) will account for another 10 points.
+We will then present artifacts in class; [your presentation and participation in small group discussions](https://canvas.olin.edu/courses/1070/assignments/20094) will account for another 10 points.
 
 ### Tips for Selecting Your Robot
 We will be talking about these robots _a lot_ this semester; we can't stress enough that you'll want to pick a robot that is interesting to you, you think might be interesting to your peers, and one that is well-documented (so you have resources to draw on throughout the semester). Some examples of robots that at least meet the latter criteria include:
@@ -48,17 +47,23 @@ You will likely enjoy this project more, if your robot or class of robot also ha
 * A context that you find interesting/want to learn more about (for instance, if you're excited about construction, you might choose to study the Reframe Systems robot; or if you'd like to learn about medical robots, perhaps the Davinci robot would be interesting to you)
 * A human-robot interaction angle (whether that means that humans and robots co-exist in context, or there is potential for a deeper societal implication)
 
-Examples of robots selected during CompRobo 2024 included:
+Examples of robots selected during CompRobo 2024 and 2025 included:
 * [Xenobots](https://wyss.harvard.edu/news/team-builds-first-living-robots-that-can-reproduce/) (student project artifact can be seen [here](https://sites.google.com/view/xenobotz/home))
-* [LUCAS cardic arrest assistant](https://www.stryker.com/us/en/emergency-care/products/lucas-3.html)
+* [LUCAS cardiac arrest assistant](https://www.stryker.com/us/en/emergency-care/products/lucas-3.html)
 * [NASA's Juno](https://science.nasa.gov/mission/juno/)
 * [Organifarm's BERRY](https://www.organifarms.de/product)
 * [Hirebotics' Cobot Welder](https://www.hirebotics.com/cobot-welder)
+* [Rizzbot](https://www.officialrizzbot.com/)
+* [Open Bionics Robotic Arm](https://openbionics.com/bionic-start-usa/?gad_source=1&gad_campaignid=23867601278&gclid=CjwKCAjwqc_UBhBKEiwAWbl25k5GRklcL2UMo1mdmAJNI1D-zOIkSepLpod2QFCrvtUe7V5XQ2D3ghoCrPwQAvD_BwE)
+* [Starship's Delivery Robots](https://www.starship.xyz/)
+* [MQ-9 Reaper AUV](https://en.wikipedia.org/wiki/General_Atomics_MQ-9_Reaper)
+* [Icefin](https://schmidt.astro.cornell.edu/icefin/)
 
 
 
-## Part 2: Discussion
-**Due Nov 4, 2025**
+
+
+<!-- ## Part 2: Discussion
 
 Like any technological system, a robot can carry different meaning or connotation to different people; and like any implemented infrastructure, the impact of a robot can vary across contexts, individuals, and cultures. In Phase 1, we had the opportunity pick a robot and present it to a small group + hear about other robot systems. This assignment asks you to go deeper in these discussions, and do the following:
 
@@ -110,7 +115,6 @@ Leading a discussion is an art and science, and there is no one "right" way to l
 
 
 ## Part 3: Reflection
-**Due Dec 12, 2025**
 
 This part of the assignment provides an opportunity to consider how you, as an engineer, will build systems that affect you, the environment, and society. It will be [submitted on Canvas](https://canvas.olin.edu/courses/942/assignments/16065). You are asked to prepare two artifacts: 
 
@@ -133,4 +137,4 @@ There are a few different ways to approach this, for instance:
 * Create a version of a [model card](https://arxiv.org/pdf/1810.03993) for your robotic system. Some robotics-oriented headings to add may be related to hardware requirements, use of open-source or closed-source elements within your implementation, and so on. Feel free to use this as a basis for your statement; you don't need to shoe-horn your system directly into the presented format.
 * Review ethical guidelines from several industry companies (e.g., [Boston Dynamics](https://bostondynamics.com/ethics/)) and model your statement after their frameworks (or your own critiques of their frameworks).
 
-In general, your statement(s) should highlight your principles and philosophies on responsible use for the technique or system you have studied. This is your opportunity to coalesce the research you've done and the conversations you've had into a professional format legible to others in the robotics industry. While completing your statement, do consider the balance between the positive aspects of your techniques and the possible negative implications if intended use were violated. 
+In general, your statement(s) should highlight your principles and philosophies on responsible use for the technique or system you have studied. This is your opportunity to coalesce the research you've done and the conversations you've had into a professional format legible to others in the robotics industry. While completing your statement, do consider the balance between the positive aspects of your techniques and the possible negative implications if intended use were violated.  -->

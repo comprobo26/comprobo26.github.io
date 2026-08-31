@@ -49,7 +49,7 @@ ros2 launch neato2_gazebo neato_gauntlet_world.py
 Which should look like this when the simulator starts:
 
 <p align="center">
-<img alt="screenshot of a Neato in the simulated obstacle course" src="../website_graphics/gauntlet_gazebo.png"/>
+<img alt="screenshot of a Neato in the simulated obstacle course" src="../website_graphics/neato_gauntlet.png"/>
 </p>
 
 If you ever want to just launch Gazebo Harmonic directly, you can use the following command in terminal:

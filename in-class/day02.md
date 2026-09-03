@@ -8,8 +8,12 @@ toc_data:
     link: in-class/day02/#for-next-time
   - title: About Modern Robotics
     link: in-class/day02/#about-modern-robotics
-  - title: Coding Exercises
-    link: in-class/day02/#coding-exercises
+  - title: Understanding ROS
+    link: in-class/day02/#understanding-ros
+  - title: Coding Exercise - Dissecting a ROS Node
+    link: in-class/day02/#dissecting-a-node
+  - title: Coding Exercise - Creating our first ROS package
+    link: in-class/day02/#creating-a-package
   - title: Going Further - Basic Behaviors
     link: in-class/day02/#going-further
 
@@ -18,13 +22,21 @@ toc_data:
 ## Today
 * First Day Debrief
 * [About Modern Robotics: A Glossary](https://docs.google.com/presentation/d/1pXEyKQvti7Vg1wR6l2MFnddXxUgTpYjwVJnR7uMjqlo/edit?usp=sharing)
-* Fundamental ROS Concepts + Teleoperation
+* Understanding ROS
+* Coding Exercise: Dissecting a ROS node
+* Coding Exercise: Creating our first ROS Package
+* Going Further: Basic Behaviors
 
 
 ## For Next Time
+* Watch the videos associated with today's exercises as a review:
+  * [Part 1: Creating a ROS package](https://youtu.be/hkbq6FW_vho)
+  * [Part 2: Writing a Publisher Node](https://youtu.be/fJvi2b9UL9o)
+  * [Part 3: Messages in ROS and Finishing the Publisher Node](https://youtu.be/KyisKUGxoKM)
+  * [Part 4: Writing a Subscriber Node](https://youtu.be/n8X8GGykuvc)
 * Submit your [YOGA Phase 0 assignment](../assignments/class_yoga) (Due Sept 7th at 7PM)
 * Find a partner for the [RoboBehaviors and FSMs](../assignments/warmup_project) and get started. Please add yourselves to a team in Canvas.
-  * It is recommended that by the next class you complete: making your RoboBehaviors package and creating a node that can drive the Neato.
+  * It is recommended that by the next class you complete: making your RoboBehaviors package and creating a node that can drive the Neato in open-loop (see the bottom of today's activities).
 * Get started on the [Broader Impacts](../assignments/broader_impacts) assignment (Due Sept 29th at 7PM).
 
 
@@ -88,7 +100,6 @@ Before we get started writing a bunch of code, let's take some time to look at w
 
 
 ## Coding Exercise: Creating our first ROS Package
-
 Sample solutions for these exercises can be found in the [class_activities_and_resources Github repo](https://github.com/comprobo26/class_activities_and_resources).  If you'd like to organize your class work as a GitHub repo, we suggest you fork the repo ``class_activities_and_resources``. Once forked, add the upstream:
 ```bash
 $ cd ~/ros2_ws/src/class_activities_and_resources
@@ -232,11 +243,11 @@ from std_msgs.msg import Header
 from geometry_msgs.msg import Point, PointStamped
 ```
 
-Now we can define the header and point that will eventually compose our ``PointStamped`` message.  Let's put this code in the ``run_loop`` function so we can publish the message each time ``run_loop`` is called.
+Now we can define the header and point that will eventually compose our ``PointStamped`` message.  Let's put this code in the ``run_loop`` function so we can publish the message each time ``run_loop`` is called. Let's go ahead and publish a point that randomly populates somewhere in a 2 by 2 square in our world. (hint: don't forget to add the numpy library to the imports in the file!)
 
 ```python
 my_header = Header(stamp=self.get_clock().now().to_msg(), frame_id="odom")
-my_point = Point(x=1.0, y=2.0, z=0.0)
+my_point = Point(x=2.0*np.random.rand(), y=2.0*np.random.rand(), z=0.0)
 ```
 
 Now that we have the two fields required for our PointStamped message, we can create it.
@@ -318,8 +329,8 @@ In order to run the node, we have to add it to our ``setup.py`` file, which is l
 ```python
     entry_points={
         'console_scripts': [
-            'send_message = in_class_day02_solutions.send_message:main',
-            'receive_message = in_class_day02_solutions.receive_message:main',
+            'send_message = in_class_day02.send_message:main',
+            'receive_message = in_class_day02.receive_message:main',
         ],
     },
 ```

@@ -1,5 +1,5 @@
 ---
-title: "The Landscape of Modern Robotics // Basic ROS Concepts"
+title: "The Landscape of Modern Robotics // ROS2 Concepts"
 toc_sticky: true
 toc_data:
   - title: Today

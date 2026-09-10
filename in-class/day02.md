@@ -29,7 +29,7 @@ toc_data:
 
 
 ## For Next Time
-* Watch the videos associated with today's exercises as a review:
+* Watch the videos associated with today's exercises as a review: <!--Require this for next year -- screen recording of point moving-->
   * [Part 1: Creating a ROS package](https://youtu.be/hkbq6FW_vho)
   * [Part 2: Writing a Publisher Node](https://youtu.be/fJvi2b9UL9o)
   * [Part 3: Messages in ROS and Finishing the Publisher Node](https://youtu.be/KyisKUGxoKM)
@@ -114,6 +114,8 @@ A set of recorded screens with narration of the coding exercise can also be watc
 * [Part 4: Writing a Subscriber Node](https://youtu.be/n8X8GGykuvc)
 
 ### Creating a ROS package
+
+<!-- Forking and cloning is really hard for people -->
 
 Let's write our code today in a package called ``in_class_day02``
 

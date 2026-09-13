@@ -40,7 +40,7 @@ We invite you to write at least one more _basic_ or _advanced_ behavior, then co
 We want to encourage resource sharing and collaborative learning as much as possible. Beyond posting on Discord, consider adding knowledge for posterity through [this Google Doc](https://docs.google.com/document/d/13yDdGVph39BK98i6aDM_2vxva4ddmW7-FKlH9Dw4WIo/edit?usp=sharing) which we've already populated with some tips and tricks!
 
 ## Logistics (and What You're Turning In)
-You may work on this assignment with 1-2 folks from the class. You will be turning in your project (both code + writeup) via a Github link submitted [on Canvas](https://canvas.olin.edu/courses/1070/assignments/20109); while you're in the midst of development, please add yourself to a team on Canvas! **Please note** -- a detailed rubric for the assignment is provided in the Canvas link; please look at this closely!
+You may work on this assignment with 1-2 folks from the class. You will be turning in your project (both code + writeup) via a Github link submitted [on Canvas](https://canvas.olin.edu/courses/1070/assignments/20109); while you're in the midst of development, please add yourself to a team on Canvas! **Please note** -- a detailed rubric for the assignment is provided in the Canvas link; please look at this closely! You can also find a template for your write up [in this course repository](https://github.com/comprobo26/report_templates/blob/main/RoboBehaviors_and_FSMs_project.md).
 
 At the end of this project, we will have a share-out where you can show off something you did, or share a key piece of information you've learned along the way! Add it to <a href="https://docs.google.com/presentation/d/1c2C2l3-VuN2uG3lVkVtfvAoGm75RxduxorTsenCKqL4/edit?usp=sharing">this shared Google Slides presentation</a> by the in-class sharing period.
 
@@ -90,6 +90,8 @@ Your writeup should answer the following questions:
 * What are the key takeaways from this assignment for future robotic programming projects?  For each takeaway, provide a sentence or two of elaboration.
 
 ***Note: don't leave the writeup to the very end!  You will have a much better time if you document as you go.  The simple act of writing up your work will actually help generate new ideas and improve the organization for your robot programs.***
+
+This template can help you to structure your write-up: <a href="https://github.com/comprobo26/report_templates/blob/main/RoboBehaviors_and_FSMs_project.md">Link to Report Templates course repo</a>.
 
 ## Sample Writeups
 

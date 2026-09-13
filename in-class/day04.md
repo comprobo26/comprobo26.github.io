@@ -22,6 +22,7 @@ toc_data:
   * **In-Class Shareout**: September 21st, 1PM ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20110))
   * **Project Due Date**: September 22nd, 7PM ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20109))
   * **Individual Survey**: September 22nd, 9PM ([Canvas description](https://canvas.olin.edu/courses/1070/quizzes/2973))
+  * Note that a report layout example is [now provided to you here](https://github.com/comprobo26/report_templates/blob/main/RoboBehaviors_and_FSMs_project.md).
   * By next class, it is recommended that:
     * You have implemented your own "drive a shape" and integrated it into your project package
     * You have designed your FSM and have started to write skeleton code of the behaviors

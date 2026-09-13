@@ -1,5 +1,5 @@
 ---
-title: "Debugging, Coordinate Frames, and Finite State Machines"
+title: "Debugging, Finite State Machines, and Wall-Following"
 toc_sticky: true
 toc_data:
   - title: Today
@@ -8,104 +8,48 @@ toc_data:
     link: in-class/day05/#for-next-time
   - title: Robot Debugging Strategies
     link: in-class/day05/#debugging-strategies
-  - title: Coordinate Frames and Coordinate Transforms in Robotics
-    link: in-class/day05/#coordinate-frames-and-coordinate-transforms-in-robotics
   - title: Finite State Machines
     link: in-class/day05/#finite-state-machines
+  - title: ROS Params and Wall-Following
+    link: in-class/day05/#ros-params-wall
 ---
-
-# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
-
 
 ## Today
 * Brainstorming Robot Debugging Strategies
-* Coordinate Frames and Coordinate Transforms in Robotics
-* Finite State Machines and Studio Time
+* Finite State Machines
+* ROS Params and Wall-Following
+* Studio Time (Wall-Following)
 
 ## For Next Time
-* Work on the <a href="../assignments/warmup_project">the RoboBehaviors Project</a>.
-  * The final project deliverables will be due **Tuesday 23rd at 7PM**!
-  * A rubric for the project is available [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078).
-  * We will have a shareout for the project on **Monday Sept. 22nd** in class (with a [short deliverable](https://canvas.olin.edu/courses/942/assignments/16079)).
-* Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **September 30th at 7PM**.
-  * We will have a class discussion on **Thursday Oct. 2nd**.
+* Work on the <a href="../assignments/warmup_project">the RoboBehaviors Project</a>, due Sept 22nd at 7PM!
+  * **In-Class Shareout**: September 21st, 1PM ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20110))
+  * **Project Due Date**: September 22nd, 7PM ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20109))
+  * **Individual Survey**: September 22nd, 9PM ([Canvas description](https://canvas.olin.edu/courses/1070/quizzes/2973))
+  * By next class, it is recommended that:
+    * You have implemented your wall-following behavior
+    * You have a working prototype of your finite state machine
+    * You are prepared to share your in-class update
+    * Your write-up is nearly complete
+* Work on your [Broader Impacts](../assignments/broader_impacts) assignment (Due Sept 29th at 7PM).
+  * We will have a [class discussion](https://canvas.olin.edu/courses/1070/assignments/20094) on Thursday Oct. 1st.
+
+
 
 ## Brainstorming Robot Debugging Strategies
 Debugging is the act of incrementally testing code for accurate behavior and tracing errors back through the system to resolve them. You may have encountered some [debugging strategies in SoftDes](https://softdes.olin.edu/docs/readings/unit-testing-basics/). Some generic strategies for debugging software carry over to robotics programming, while novel methods may need to be included given the interaction software has with hardware. 
 
 ### Group Discussion
-Take 10 minutes to come up with some debugging strategies for writing robotics code with the folks around you, then we'll share out to the class. As a motivating example, let's consider the part of <a href="../assignments/warmup_project">the RoboBehaviors</a> where you have to create a wall follower.
+Take 10 minutes to come up with some debugging strategies for writing robotics code with the folks around you based on your experiences in this class so far, then we'll share out to the class. As a motivating example, let's consider the part of <a href="../assignments/warmup_project">the RoboBehaviors</a> where you have to create a wall follower.
 
 Here are some areas to consider in the debugging / development lifecycle:
 1.  How do you ensure your code is correct (implements the strategy you expected)?
-2.  How do you test your approach to see if it performs the task effectively (e.g., follows a person)?
+2.  How do you test your approach to see if it performs the task effectively (e.g., follows a wall)?
 3.  How might you tune the parameters of your approach to make it perform as best possible?
 
-
-## Coordinate Frames and Coordinate Transforms in Robotics
-
-> Likely you've encountered the notion of multiple coordinate systems before at some point in your academic career.  Depending on your path through Olin, you may already be familiar with the mechanics of how to map vectors between different coordinate systems (either in 2D or 3D).  In this exercise, you'll get a chance to refresh some of this knowledge and to also gain a conceptual understanding of how the notion of multiple coordinate systems plays out in robotics.
-
-### `tf2` and You
-
-We've encountered a funny logistical matter when using Rviz2 to visualize our /my_point topic -- we needed to change our "Fixed Frame" from /map to /odom. What's going on? These are two different _coordinate frames_ ROS2 uses to track a robot in a world. There are actually loads of coordinate frames we might want to be thinking about in robotics. (And you [can read more about how ROS has thought about coordinate transforms here](https://www.ros.org/reps/rep-0105.html)).
-
-Let's get a sense for how we might encounter more coordinate transforms in ROS2 by walking through [this tutorial](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html). ROS2 uses a utility called `tf2` in order to track the relationships between various entities in a world. When we walk through this tutorial, we'll be seeing how to inspect all the different transforms that are going on.
-
-### Creating a `world` coordinate frame
-
-Understanding the math behind what `tf2` is doing for us can be super helpful -- especially when we start thinking about debugging robot behavior, adding sensors to our robots, and interacting in increasingly complex environments.
-
-Suppose your Neato is at position 3.0m, 5.0m with a heading of 30 degrees (where counter-clockwise rotation is positive) in a coordinate system called ``world``.  Draw a picture.  Make sure to label the axes of the ``world`` coordinate system (don't worry about the z-axis).In robotics, we frequently need to express the position of various entities (e.g., obstacles, goal locations, other robots, walls, doorways, etc.).  While we could express all of these positions in terms of the coordinate system ``world``, in many situations this will be cumbersome.
-
-**Exercise:** Taking the Neato as an example, make a list of the coordinate systems that you feel would be convenient to define.  For each coordinate system, define its origin and give a few examples of entities that would be natural to express in that coordinate system. 
-
-### ``base_link``
-
-Next, we'll define ``base_link``, which will serve as our robot-centric coordinate system.  The origin of this coordinate system will be at the midpoint of the line connecting the robot's wheels.  The x-axis will point forwards, the y-axis will point to the left, and the z-axis will point up.  Update your drawing to indicate the position of the ``base_link`` coordinate axes (again, don't worry about the z-axis).
-
-Now that we have defined our new coordinate system, we'd like to be able to take points expressed in this coordinate system and map them to the ``world`` coordinate system (and vice-versa).  In order to do this, we need to specify the relationship between these two coordinate systems.  A natural way to specify the relationship between two coordinate systems is to specify the position of the origin of one coordinate system in the other as well as the directions of the coordinate axes of one frame in the other.  Going back to our original example we can say that the coordinate axes of the Neato's ``base_link`` coordinate system are at position 3.0m, 5.0m with a rotation of 30 degrees relative to the coordinate axes of the ``world`` coordinate frame.  We usually think of this information as defining the transformation from ``world`` to ``base_link``.  It turns out that with just this information, we can map vectors between these two coordinate systems.
-
-### From ``base_link`` to ``world``
-
-**Exercise:** Determine the coordinates of a point located at (1.0m, 0.0m) in the ``base_link`` coordinate system in the ``world`` coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
-
-**Exercise:** Determine the coordinates of a point located at (0.0m, 1.0m) in the ``base_link`` coordinate system in the ``world`` coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
-
-**Exercise:** Determine the coordinates of a point located at (x, y) in the ``base_link`` coordinate system in the ``world`` coordinate system.  If you are having trouble operationalizing your answer in terms of equations, you can define it in terms of high-level operations (e.g., translations, rotations, etc.).
+### For Your Projects
+For your RoboBehaviors project, ensure that you have implemented some debugging strategies -- print things to terminal or log them, include special topics for visualization, implement tests. _Do not delete your debugging tools_ when submitting your final product.
 
 
-### From ``world`` to ``base_link``
-
-There are multiple ways to tackle this one.  We think it's easiest to do algebraically (with your good-old i-hat and j-hat notation), but you can do it in terms of geometry / trigonometry too.  Don't get too hung up on the mechanics, try to understand conceptually how you would solve the problem.
-
-**Exercise:** Determine the coordinates of a point located at (0.0m, 1.0m) in the ``world`` coordinate system in the ``base_link`` coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
-
-**Exercise:** Determine the coordinates of a point located at (1.0m, 0.0m) in the ``world`` coordinate system in the ``base_link`` coordinate system.  First draw the point on the board to make sure everyone agrees what its location is.  Once you've determined your answer, how can you tell if you are right?
-
-**Exercise:** Determine the coordinates of a point located at (x, y) in the ``world`` coordinate system in the ``base_link`` coordinate system.  If you are having trouble operationalizing your answer in terms of equations, you can define it in terms of high-level operations (e.g., translations, rotations, etc.).
-
-
-### Possible Notation
-
-Sometimes, it can be helpful to lead with notation.  Other times, it can obfuscate and confuse.  Here is some notation that you could use to reason about and define coordinate systems. If this is useful to you, please go for it!
-
-$$\begin{eqnarray}
-\mathbf{p}_{/W} &\triangleq& \mbox{a point, p, expressed in coordinate system W} \\
-\mathbf{p}_{/N} &\triangleq& \mbox{a point, p, expressed in coordinate system N} \\
-\hat{\mathbf{i}}_{N} &\triangleq& \mbox{a unit vector in the i-hat direction of coordinate system N} \\
-\hat{\mathbf{j}}_{N} &\triangleq& \mbox{a unit vector in the j-hat direction of coordinate system N} \\
-\hat{\mathbf{r}}_{W\rightarrow N} &\triangleq& \mbox{a vector pointing from the origin of W to the origin of N} \\
-\mathbf{r}_{W \rightarrow N / N} &\triangleq& \hat{\mathbf{r}}_{W\rightarrow N}\mbox{ expressed in coordinate system N} \\
-\hat{\mathbf{i}}_{N/W} &\triangleq& \hat{\mathbf{i}}_{N}\mbox{ expressed in coordinate system W} \\
-\hat{\mathbf{j}}_{N/W} &\triangleq& \hat{\mathbf{j}}_{N}\mbox{ expressed in coordinate system W}\end{eqnarray}$$
-
-
-### Static Versus Dynamic Coordinate Transformations
-
-The relationship between some coordinate systems are dynamic (meaning they change over time) and some are static (meaning they are constant over time).
-
-**Exercise:**  Assume that our Neato robot can move about in the ``world`` by using its wheels.  Is the relationship between ``world`` and ``base_link`` static or dynamic?  Given the coordinate systems you came up with earlier, list some examples of coordinate system relationships that are static and some that are dynamic.
 
 
 ## Finite State Machines
@@ -127,11 +71,73 @@ Finite state machines, by their name, imply the following:
 
 Here, while there are two states and two transition criteria, and there is a cycle, you can have finite state machines such that there are multiple transition criteria that can lead to different states, you can have "terminal states" where once the robot arrives in that state it stays in that state forever, and you can have internal cycles within a larger network. While they may be finite and deterministic, finite state machines can capture incredibly complex behavior -- their limitation is realistically your own imagination (since everything must be explicitly defined). 
 
-**Exercise 1** With your project partner, consider what behaviors you would like to include in a finite state machine, and brainstorm a list of transition criteria between these states.
+Outside of class, you and your partner have already started to design a finite state machine for your project; with your partner now, please:
+* Draw your proposed FSM on the board -- make sure to label states and transition criteria specifically
+* Under your diagram, note how you're thinking about implementing your finite state machine (single-threading, multi-threading, special publish/subscribe frameworks, etc.). A common dichotomy you could consider:
+  * Many nodes, one manager: You are running behaviors in N separate nodes, and you have one "manager node" running your FSM to coordinate between which nodes are "active" over the ROS network.
+  * One node, many callbacks: You run a single FSM node with the behaviors directly embedded as functionality in the FSM, accessed by a system of internal callbacks for managing what functions are accessed based on internal record keeping of states and transitions.
 
-**Exercise 2** With your project partner, consider your implementation architecture in ROS. There are two general frameworks you could decide between (Note: there are more! But this is a common dichotomy to consider):
+You will share your plans with a few other teams, an opportunity for quick feedback and questions. 
 
-1. Many nodes, one manager: You are running behaviors in N separate nodes, and you have one "manager node" running your FSM to coordinate between which nodes are "active" over the ROS network.
-2. One node, many callbacks: You run a single FSM node with the behaviors directly embedded as functionality in the FSM, accessed by a system of internal callbacks for managing what functions are accessed based on internal record keeping of states and transitions.
 
-You can decide on any architecture, just before to clearly describe your choices in your project write-up!
+
+## ROS Params and Wall-Following
+
+### Simplify: Wall Approach
+Wall-following is complicated (it  can be represented as a finite-state-machine!), so it is useful to break it down into smaller or simpler projects. We're going to walk through one sub-component of wall-following: Wall Approach.
+
+Let's consider your `distance_emergency_stop` from a few classes ago -- we're going to go ahead and adapt this into a `wall-approach` node.
+
+To get started, create a package somewhere in your ``ros2_ws/src`` directory for your work.  In this example, we can put the package directly in ``ros2_ws/src/class_activities_and_resources`` directory then rebuild the workspace:
+
+```bash
+$ cd ~/ros2_ws/src/class_activities_and_resources
+$ ros2 pkg create in_class_day05 --build-type ament_python --node-name wall_approach --dependencies rclpy std_msgs geometry_msgs sensor_msgs neato2_interfaces
+$ cd ~/ros2_ws
+$ colcon build --symlink-install
+$ source ~/ros2_ws/install/setup.bash
+```
+
+You may have noticed at this point that ROS requires a certain amount of [boiler-plate code](https://en.wikipedia.org/wiki/Boilerplate_code) to get going. From here, you have three choices for development:
+* Write everything from scratch
+* Start with your `distance_emergency_stop` code
+* Start with this [example code](../Sample_code/wall_approach_starter)
+
+We would like to program the Neato to adjust its position so that it is a specified (target) distance away from the wall immediately in front of it. The Neato's forward velocity should be proportional to the error between the target distance and its current distance. 
+
+With your project partner(s), consider the following:
+* What variables do you need to define?
+* When you get a Lidar measurement, how will you compute error?
+* How will your transform your error into a velocity command? (hint: consider the sign of the error and your velocity; consider the maximum velocity that the Neato can travel.)
+
+Go ahead and implement your _proportional controller_ within your `wall_approach` node. 
+
+> You can use this link to find [a sample solution to this task](https://github.com/comprobo26/class_activities_and_resources/blob/main/in_class_day05_solutions/in_class_day05_solutions/wall_approach.py).
+
+
+### Getting Fancy: ROS Params
+
+To make a node more configurable, you can use ROS Params, which allow us pass in arguments to a node from the commandline (or control them through tools like `rqt`). This is super powerful, because it can let you, in real time, adjust your robot performance and behavior without killing, re-writing, and re-running your nodes. For proportional control, we could set our _proportional coefficient_ and our _target wall distance_ in this way, allowing us to tune our robot's behavior without having to relaunch the code tons of times.
+* See the [ros param command line tools documentation](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html) for more information
+* [Code for accessing parameters in Python documentation from The Robotics BackEnd](https://roboticsbackend.com/rclpy-params-tutorial-get-set-ros2-params-with-python/) (which might be a bit easier to parse than the [official one](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html)). 
+
+For instance, if you follow the documentation you can create a node similar to our [sample solution, ``wall_approach_fancy.py``](https://github.com/comprobo26/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach_fancy.py) that supports the following customization via the command line:
+
+```bash
+$ ros2 run in_class_day05_solutions wall_approach_fancy --ros-args -p target_distance:=1.5 -p Kp:=0.5
+```
+
+Here is a demo of the script, ``wall_approach_fancy.py`` that uses ROS parameters as well as the tool ``dynamic_reconfigure`` for easy manipulation of various node parameters.
+> Note that in order to support ``dynamic_reconfigure`` in your nodes, you have to call ``add_on_set_parameters_callback`` and implement an appropriate callback function (see sample solution for more on this).
+
+![An animated Gif that shows a robot attempting to maintain a particular distance from a wall](day04images/wall_approach_fancy_ros2.gif)
+
+### Adding Complexity: Wall-Following (Studio Time)
+When you feel like you have a sense of the example code, or have working sample code of your own for wall-approach, consider how you might adjust the code to work for wall-following (approaching and driving parallel to a wall at a certain distance). Have a look at the assignment document for a sample diagram (hint: you might want to draw a lot of pictures before you think about coding anything). 
+
+With your project partner(s) specifically consider the following:
+* How does the robot know what angle it is relative to the wall? How will you parse a Lidar message into an angle?
+* How should the robot drive if it is too far from the wall? Too close from the wall? 
+* How will you compute _error_ in your robot's relationship with the wall? How should error control linear velocity? Angular velocity?
+* How will you architect your wall-following behavior as a node?
+* How will you test you wall-following behavior?

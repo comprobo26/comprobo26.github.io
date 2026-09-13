@@ -78,7 +78,7 @@ class DrawSquare(Node):
             self.drive(linear=0.0, angular=0.0)
 
     def drive_forward(self, distance):
-        """Drive straight for the spefcified distance.
+        """Drive straight for the specified distance.
 
         Args:
             distance (_type_): the distance to drive forward.  Only positive

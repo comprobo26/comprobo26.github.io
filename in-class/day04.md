@@ -58,13 +58,13 @@ Let's have a look at a broader impacts statement from a NSF proposal submitted t
 Get together with some folks around you, and consider the following questions (~15 minutes):
 1. Using the definitions from the NSF broader impacts page, what key themes do you see emerge in this paragraph? 
 2. What evaluation metrics would you use to assess whether the broader impacts goals were met over the course of this project? 
-3. If you were working on this project, what [would you prioritize](../How%20to/ethics_screening_tool.md) as part of your project management workflow to ensure that the intended broader impacts were met?
+3. If you were working on this project, what [would you prioritize](../How to/ethics_screening_tool.md) as part of your project management workflow to ensure that the intended broader impacts were met?
 4. What critiques, if any, do you have to make to this abstract based on your understanding of Broader Impacts?
 5. Would you fund this work? Why or why not?
 
 We'll do a brief report out (~5 minutes) with the whole class.
 
-As you work on your Broader Impacts Part 1 project, you might want to consider developing your own definition of "broader impacts" and using that as a means of guiding your research and artifact development. To help you with this, our [Ethics Screening Tool](../How%20to/ethics_screening_tool.md) may be useful.
+As you work on your Broader Impacts Part 1 project, you might want to consider developing your own definition of "broader impacts" and using that as a means of guiding your research and artifact development. To help you with this, our [Ethics Screening Tool](../How to/ethics_screening_tool.md) may be useful.
 
 
 ## ROS, Threading, and Driving in the Square

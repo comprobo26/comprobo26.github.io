@@ -121,7 +121,7 @@ To make a node more configurable, you can use ROS Params, which allow us pass in
 * See the [ros param command line tools documentation](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html) for more information
 * [Code for accessing parameters in Python documentation from The Robotics BackEnd](https://roboticsbackend.com/rclpy-params-tutorial-get-set-ros2-params-with-python/) (which might be a bit easier to parse than the [official one](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html)). 
 
-For instance, if you follow the documentation you can create a node similar to our [sample solution, ``wall_approach_fancy.py``](https://github.com/comprobo26/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach_fancy.py) that supports the following customization via the command line:
+For instance, if you follow the documentation you can create a node similar to our [sample solution, ``wall_approach_fancy.py``](https://github.com/comprobo26/class_activities_and_resources/blob/main/in_class_day05_solutions/in_class_day05_solutions/wall_approach_fancy.py) that supports the following customization via the command line:
 
 ```bash
 $ ros2 run in_class_day05_solutions wall_approach_fancy --ros-args -p target_distance:=1.5 -p Kp:=0.5

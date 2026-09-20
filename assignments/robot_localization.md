@@ -10,18 +10,18 @@ So far, we've programmed Neatos using reactive control strategies and combined b
 
 ## Learning Objectives
 
-* Build fluency with ROS2
+* Build fluency with ROS2, including being able to read and contribute to a large existing code base
 * Learn about one core problem (robot localization) and one important algorithm (particle filtering)
-* Learn strategies for developing and debugging algorithms for robotics
+* Learn strategies for developing and debugging algorithms for robotics, including unit test design
 * Get a feel for the algorithmic trade-offs between accuracy and computational efficiency
 
 ## Teaming
 
-For this project, you should work with one other student (teams of three are tentatively allowed for this assignment). Once you have formed your team, please [list your group](https://docs.google.com/spreadsheets/d/1-YlG0zlFozc0oo_GY-xu_2HTyY3RUPz8JD785Cf7zkw/edit?usp=sharing) and [add yourself to Canvas](https://canvas.olin.edu/courses/942/groups#tab-994).  
+For this project, you should work with one other student (teams of three are tentatively allowed for this assignment). Once you have formed your team, please [add yourself to Canvas](https://canvas.olin.edu/courses/1070/groups#tab-1312). At the end of this project, you will [submit an individual reflection](https://canvas.olin.edu/courses/1070/quizzes/2978) that include teaming experience.  
 
 ## Deliverables
 
-### Conceptual Overview (Due Friday October 3 by 7PM)
+### Conceptual Overview (Due Friday October 2 by 7PM)
 
 Using a combination of diagrams and text, describe the major steps of the particle filter at a level of detail sufficient for creating your particle filter implementation.
 
@@ -41,24 +41,30 @@ As you write your conceptual overview, if there is a gap in your understanding t
 
 7. Given a weighted set of particles, how will you sample a new set of particles?
 
-You can submit your assignment [on Canvas](https://canvas.olin.edu/courses/942/assignments/16068). Each team can submit one document.
+8. How will you verify that your code works as intended? What tests will you implement? 
 
-### In-class Presentation / Demo (Due Thursday October 16 by Class)
+You can submit your assignment [on Canvas](https://canvas.olin.edu/courses/1070/assignments/20099). Each team can submit one document.
 
-Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, etc. In addition, you should show a demo of your system in action.
+### In-class Presentation / Demo (Due Monday October 19 by Class)
 
-This deliverable be assessed in a binary fashion (did you do the above or not). Please put your material in this [Google Slides presentation](https://docs.google.com/presentation/d/1VbeayIDylHz-cvh0v6q-daXl8Rz9PxM3whtINls-i6w/edit?usp=sharing).
+Each team will spend about 5 minutes presenting what they did for this project. Since everyone's doing the same project, there's no need to provide any context as to what the particle filter is or how it works.  I'd like each team to talk about what they did that adds to the overall knowledge of the class.  Examples of this would be non-trivial design decisions you made (and why you made them), development processes that worked particularly well, code architecture, tests you implemented and their performance, etc. In addition, you should show a demo of your system in action.
+
+You can submit your slide(s) and contribute to the class presentation through the [Canvas assignment](https://canvas.olin.edu/courses/1070/assignments/20103).
 
 
-### Your Code and Bag Files (Due Friday October 17 by 7PM)
+### Individual Reflection (Due Tuesday October 20 by 7PM)
+Each person will reflect on their project teaming experience and how the experience related to their learning goals. This is a graded survey in [Canvas](https://canvas.olin.edu/courses/1070/quizzes/2978). You will have up to a week after the project is due to submit your reflection.
 
-If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo25/robot_localization">this repo</a>.  If you are using C++, you should fork <a href="https://github.com/comprobo23/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in.
+
+### Your Code and Bag Files (Due Tuesday October 20 by 7PM)
+
+If you are using Python (the vast majority of the class), you should fork <a href="https://github.com/comprobo26/robot_localization">this repo</a>.  If you are using C++, you should fork <a href="https://github.com/comprobo26/robot_localization_cpp">this repo</a>.  Please push your code to your fork in order to turn it in.
 
 You should include a couple of bag files of your code in action. Place the bag files in a subdirectory of your ROS package called "bags".  In this folder, create a README file that explains each of the bag files (how they were collected, what you learn from the results, etc.).
 
-Please [indicate on Canvas](https://canvas.olin.edu/courses/942/assignments/16067) when you have prepared your project for final submission (Note: this includes the write-up (details below) as it is part of your repository).
+Please [submit a link to your fork on Canvas](https://canvas.olin.edu/courses/1070/assignments/20098) when you have prepared your project for final submission (Note: this includes the write-up (details below) as it is part of your repository).
 
-### Writeup (Due Friday October 17 by 7PM)
+### Writeup (Due Tuesday October 20 by 7PM)
 
 In your ROS package create a ``README.md`` file to hold your project writeup. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``), and so on.
 
@@ -66,6 +72,7 @@ Your write-up should touch on the following topics.
 * What was the goal of your project?
 * How did you solve the problem? (Note: this doesn't have to be super-detailed, you should try to explain what you did at a high-level so that others in the class could reasonably understand what you did).
 * Describe a design decision you had to make when working on your project and what you ultimately did (and why)? These design decisions could be particular choices for how you implemented some part of an algorithm or perhaps a decision regarding which of two external packages to use in your project.
+* Describe the tests that you implemented and conducted to verify your code, and their results.
 * What if any challenges did you face along the way?
 * What would you do to improve your project if you had more time?
 * Did you learn any interesting lessons for future robotic programming projects? These could relate to working on robotics projects in teams, working on more open-ended (and longer term) problems, or any other relevant topic.
@@ -78,7 +85,7 @@ Your write-up should touch on the following topics.
 * <a href="https://github.com/zneb97/robot_localization/blob/master/Robot_Localizer_WriteUp.pdf">Nick Steelman and Ben Ziemann</a>
 * <a href="https://github.com/AriB2003/robot_localization/tree/main">Ari Bobesh and Will Young</a>
 
-
+This template can help you to structure your write-up: <a href="https://github.com/comprobo26/report_templates/blob/main/State_Estimation_and_Localization_project.md">Link to Report Templates course repo</a>.
 
 ## Robot Localization and the Particle Filter
 
@@ -98,7 +105,7 @@ The particle filter involves the following steps
 
 ### Getting the Robot Localizer Starter Code
 
-The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo25/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.  Once you clone your fork to your ROS2 workspace, do a ``colcon build --symlink-install`` and source ``install/setup.bash``.
+The starter code will be in a package called ``robot_localization``.  The <a href="https://github.com/comprobo26/robot_localization"><tt>robot_localization</tt> Github repo</a> you forked is already setup as an appropriate package.  Once you clone your fork to your ROS2 workspace, do a ``colcon build --symlink-install`` and source ``install/setup.bash``.
 
 ### Installing Supporting Packages
 
@@ -106,9 +113,9 @@ You will need some additional ROS packages that we haven't used thus far.
 
 {% include codeHeader.html %}
 ```bash
-pip3 install scikit-learn && sudo apt install -y ros-humble-nav2-map-server \
-	ros-humble-nav2-amcl \
-	ros-humble-slam-toolbox \
+pip3 install scikit-learn && sudo apt install -y ros-jazzy-nav2-map-server \
+	ros-jazzy-nav2-amcl \
+	ros-jazzy-slam-toolbox \
 	python3-pykdl
 ```
 
@@ -170,12 +177,12 @@ Make sure you can find the ``.yaml`` file that was saved in the previous step.  
 
 ### Running AMCL
 
-Now that you have a map, you will use the built-in particle filter package called AMCL (adaptive monte carlo localization).
+Now that you have a map, you will use the built-in particle filter package called AMCL (adaptive Monte Carlo localization).
 
 Before you start this step here are a few things to do.
 1.  Stop the ``slam_toolbox`` nodes you were running from before.  Find the terminal where you ran the ``slam_toolbox online_sync_launch.py`` command and hit ``control-c``.
 2.  Make sure ``rviz`` is running and load the configuration under ``robot_localization/rviz/amcl.rviz`` (this will greatly simplify the visualization of the topics).  You can use the following shortcut to make sure the configuration is loaded (note: you would have to modify this a bit if your repo is in a different location).  ``rviz2 -d ~/ros2_ws/src/robot_localization/rviz/amcl.rviz``
-3.  Make sure you know the path to the ``.yaml`` file created when you called the ros service ``save_map``.  Counterintuitively, the map is saved based on the directory you were in when you launched the ``slam_toolbox``.  Hopefully, that information will help you locate the ``.yaml`` file.  NOTE: when you use this path in the step below, you will need to replace the ``~`` character with the actual path to your home directory, e.g., ``/home/pruvolo``.
+3.  Make sure you know the path to the ``.yaml`` file created when you called the ros service ``save_map``.  Counterintuitively, the map is saved based on the directory you were in when you launched the ``slam_toolbox``.  Hopefully, that information will help you locate the ``.yaml`` file.  NOTE: when you use this path in the step below, you will need to replace the ``~`` character with the actual path to your home directory, e.g., ``/home/vpreston``.
 
 To start ``AMCL``, run the following launch file.
 
@@ -245,6 +252,8 @@ The last line where ``AMCL`` is complaining about wanting an initial pose, bring
 
 Return to the terminal where the rosbag is playing and click space bar.  Return to rviz.  You should see a cloud of particle in the map that move around with the motion of the robot.  If you want the particle filter to work well, you can update the 2D pose estimate based on the arrow shown by the ``map_pose`` topic.  If all goes well, you'll see the robot moving around in the map and the cloud of particles condensing to the true pose of the robot.
 
+
+
 ## Running your own Particle Filter
 
 The instructions for running your particle filter are identical except for you need to use a different launch file to startup your code.
@@ -254,9 +263,11 @@ The instructions for running your particle filter are identical except for you n
 ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
 ```
 
+
+
 ## Localization with Bag Files
 
-We have included some bag files in the repository that you can use to work on the project.  The bag files included are in the following locations.  These bag files have been collected from the [Turtlebot4](https://clearpathrobotics.com/turtlebot-4/).
+We have included some bag files in the repository that you can use to work on the project.  The bag files included are in the following locations. These bag files have been collected from the [Turtlebot4](https://clearpathrobotics.com/turtlebot-4/) several years ago.
 
 
 ```bash
@@ -288,7 +299,7 @@ ros2 launch robot_localization test_pf.py map_yaml:=path-to-your-yaml-file
 
 The setup for rviz is pretty involved, so we have provided a configuraion file for you.  Once rviz is open, you can click ``File`` then ``Open Config`` and the select ``~/ros2_ws/src/robot_localization/rviz/turtlebot_bag_files.rviz``.
 
-Alernatively, you can launch ``rviz2`` and pass the configuration file on the command line.
+Alternatively, you can launch ``rviz2`` and pass the configuration file on the command line.
 
 {% include codeHeader.html %}
 ```bash
@@ -305,7 +316,7 @@ When the bag is finished playing, you will probably want to perform the followin
 
 #### Recording your own bag files
 
-You can make your own bag files either with the physical robot or the simulator.  When recording a bag file of the Neato, you'll want to modify your recording command a bit from what you did in the warmup project.
+You can make your own bag files either with the physical robot or the simulator.  When recording a bag file of the Neato, you'll want to modify your recording command a bit from what you did in the RoboBehaviors project.
 
 {% include codeHeader.html %}
 ```bash
@@ -327,6 +338,7 @@ You have complete latitude for choosing your approach to particle filtering. Whi
 
 * Use the provided rosbags to debug your code (or, for practice, make your own ROS bags) 
 * Visualize as many intermediate computations as possible
+* Implement your unit tests as soon as possible and use these as part of your debugging workflow
 * Start with simple cases, e.g. start with just one particle, make sure you can visualize the particle in rviz
 	* Build test cases that can be used to assess that snippets/functions of your code are working as expected. You can use a bag-file you collect within a test case as well.
 * Implement a simple laser scan likelihood function. Test it using just a subset of the Lidar measurements. Make sure that the results conform to what you expect (the simulator or rosbag will be helpful here).

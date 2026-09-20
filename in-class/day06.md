@@ -14,45 +14,44 @@ toc_data:
     link: in-class/day06/#coordinate-frames-and-coordinate-transforms-in-robotics
 ---
 
-# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
-
-
 ## Today
 * RoboBehaviors Debrief
 * An Introduction to State Estimation
 * Conceptual Introduction to the Particle Filter
-* Studio Time
+* Coordinate Frames and Coordinate Transforms
 
 ## For Next Time
-* Work on the <a href="../assignments/warmup_project">the RoboBehaviors</a>.
-  * The final project deliverables are due tomorrow **Tuesday 23rd at 7PM**!
-  * A rubric for the project is available [on Canvas](https://canvas.olin.edu/courses/942/assignments/16078).*
-* Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **September 30th at 7PM**.
-  * We will have a class discussion on **Thursday Oct. 2nd**.
+* Finish the <a href="../assignments/warmup_project">the RoboBehaviors Project</a>, due Sept 22nd at 7PM (tomorrow)!
+  * **Project Due Date**: September 22nd, 7PM ([Canvas description](https://canvas.olin.edu/courses/1070/assignments/20109))
+  * **Individual Survey**: September 22nd, 9PM ([Canvas description](https://canvas.olin.edu/courses/1070/quizzes/2973))
+* Work on your [Broader Impacts](../assignments/broader_impacts) assignment (Due Sept 29th at 7PM).
+  * We will have a [class discussion](https://canvas.olin.edu/courses/1070/assignments/20094) on Thursday Oct 1st.
 * Read over the description of the [Robot Localization project](../assignments/robot_localization).
   * For more reinforcement of the concepts behind the particle filter, watch this <a href="https://www.youtube.com/watch?v=aUkBa1zMKv4">video</a>.
 
 
 ## RoboBehaviors Debrief
-While the final deliverables are still being polished, let's share-out some of what we've been learning and doing with one another. Slides are <a href="https://docs.google.com/presentation/d/1Aa63PUPe-afBzpv647Qvuj_C0xe-lIBMh9_3bc42kvs/edit?slide=id.p#slide=id.p">available here</a>.
+While the final deliverables are still being polished, let's share-out some of what we've been learning and doing with one another. Slides are <a href="https://canvas.olin.edu/courses/1070/assignments/20110">accessible here</a>. Each team will take ~2-3 minutes to share their slide. 
 
 
 ## An Introduction to State Estimation
-We're about to launch our next project into _State Estimation and Localization_. This is a very rich subfield in robotics; a <a href="https://docs.google.com/presentation/d/1IslrQmigazEP4l0cHZUHa8N8RLeWmJAn1iHkq9uQShQ/edit?usp=sharing">short presentation</a> will introduce some of the concepts and lead into our activity on a conceptual introduction to a particle filter.
+We're about to launch our next project into _State Estimation and Localization_. This is a very rich subfield in robotics; a <a href="https://docs.google.com/presentation/d/1vQcaxK6X20AUwvsp0X9MDG3EhRQTawAV1m_ExcokTRY/edit?usp=sharing">short presentation</a> will introduce you to some of the core concepts and lead into our activity on a conceptual introduction to a particle filter.
 
 
 ## A Conceptual Introduction to the Particle Filter
 How does a robot know where it is? We'll be doing an activity to introduce our next major topic in the class: robot localization. This is supposed to be a fun activity to get you thinking about the basic concepts of one tool for localization, the particle filter.
 
-## Coordinate Frames and Coordinate Transforms in Robotics
 
-> Likely you've encountered the notion of multiple coordinate systems before at some point in your academic career.  Depending on your path through Olin, you may already be familiar with the mechanics of how to map vectors between different coordinate systems (either in 2D or 3D).  In this exercise, you'll get a chance to refresh some of this knowledge and to also gain a conceptual understanding of how the notion of multiple coordinate systems plays out in robotics.
+## Coordinate Frames and Coordinate Transforms in Robotics
+"Where am I?" is a question that requires a _basis for reference_ -- that is, the answer to this question is only useful if you know where anything else actually is; otherwise the answer amounts to "here". In robotics, we use several _frames of reference_ when referring to the location of a robot. 
+
+Likely you've encountered the notion of multiple coordinate systems before at some point in your academic career.  Depending on your path through Olin, you may already be familiar with the mechanics of how to map vectors between different coordinate systems (either in 2D or 3D).  In this exercise, you'll get a chance to refresh some of this knowledge and to also gain a conceptual understanding of how the notion of multiple coordinate systems plays out in robotics.
 
 ### `tf2` and You
 
 We've encountered a funny logistical matter when using Rviz2 to visualize our /my_point topic -- we needed to change our "Fixed Frame" from /map to /odom. What's going on? These are two different _coordinate frames_ ROS2 uses to track a robot in a world. There are actually loads of coordinate frames we might want to be thinking about in robotics. (And you [can read more about how ROS has thought about coordinate transforms here](https://www.ros.org/reps/rep-0105.html)).
 
-Let's get a sense for how we might encounter more coordinate transforms in ROS2 by walking through [this tutorial](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html). ROS2 uses a utility called `tf2` in order to track the relationships between various entities in a world. When we walk through this tutorial, we'll be seeing how to inspect all the different transforms that are going on.
+Let's get a sense for how we might encounter more coordinate transforms in ROS2 by walking through [this tutorial](https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Tf2/Introduction-To-Tf2.html). ROS2 uses a utility called `tf2` in order to track the relationships between various entities in a world. When we walk through this tutorial, we'll be seeing how to inspect all the different transforms that are going on.
 
 ### Creating a `world` coordinate frame
 

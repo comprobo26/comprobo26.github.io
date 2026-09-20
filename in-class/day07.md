@@ -1,5 +1,5 @@
 ---
-title: "Tough Conversations // The Particle Filter for Robot Localization"
+title: "Discussion Frameworks // The Particle Filter for Robot Localization"
 toc_sticky: true
 toc_data:
   - title: Today
@@ -18,9 +18,6 @@ toc_data:
     link: in-class/day07/#project_kickoff
 ---
 
-# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
-
-
 ## Today 
 
 * Frameworks for Challenging Conversations
@@ -30,13 +27,15 @@ toc_data:
 * Project Kick-Off
 
 ## For Next Time
-* Work on the [Broader Impacts assignment Part 1](../assignments/broader_impacts), due on **September 30th at 7PM**.
-  * We will have a class discussion on **Thursday Oct. 2nd**.
-* [Form a team](https://docs.google.com/spreadsheets/d/1-YlG0zlFozc0oo_GY-xu_2HTyY3RUPz8JD785Cf7zkw/edit?usp=sharing) and review [a view of the finish line](../assignments/robot_localization#a-view-of-the-finish-line-and-getting-set-with-rviz)
-* Work on the [Particle Filter Conceptual Overview](https://canvas.olin.edu/courses/942/assignments/16068), due on **Friday October 3rd at 7PM**.
-* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/kPjvgWb4ETDKMHRD7)
+* Work on your [Broader Impacts](../assignments/broader_impacts) assignment (Due Sept 29th at 7PM).
+  * We will have a [class discussion](https://canvas.olin.edu/courses/1070/assignments/20094) on Thursday Oct 1st.
+* Read over the description of the [Robot Localization project](../assignments/robot_localization).
+  * Form a team and list yourselves [on Canvas](https://canvas.olin.edu/courses/1070/groups#tab-1312).
+  * Start to work on the [Particle Filter Conceptual Overview](https://canvas.olin.edu/courses/1070/assignments/20099), due on Friday Oct 2nd at 7PM.
+  * For more reinforcement of the concepts behind the particle filter, watch this <a href="https://www.youtube.com/watch?v=aUkBa1zMKv4">video</a>.
 
-## Frameworks for Challenging Discussions (For Your Consideration)
+
+## Frameworks for Challenging Discussions
 Soon, you'll be asked to host an in-class discussion on your selected robot to gather different perspectives on the robotic system and its context. Discussions about perspective, context, values, and ethics can sometimes be tricky -- perhaps there is conflict among participants, or it is challenging for everyone to engage fully with a topic. Simply being fully present and willing to pull on different threads of a conversation can be challenging. To assist you in participating in our class and project discussions, the following may be of interest:
 * **Combine different discussion techniques** -- consider the use of individual quiet brainstorming, round-robin sharing, and open dialog; during what parts of a discussion might these be useful to your group? When could switching techniques change the energy of the discussion?
 * **Focus on collaborative generation** -- one way to invite multiple voices is to create a mechanism that feels collaborative; if the aim of the discussion is to generate multiple perspectives on an idea, then you are inviting everyone participating in the discussion to share or experiment with different ideas and be open to hearing other ideas. This would be the opposite of focusing a discussion on a single perspective or trying to determine the "optimal" way to think about something together. 
@@ -51,21 +50,17 @@ What are other norms or expectations that we should have for one another in our 
 
 ## We're All Living in a 1D World! Part 1: Simulation Intuition
 
-Let's see how particle filtering might manifest computationally. To get the code for today you will need to make sure your environment is setup with matplotlib and scipy. If you want to check you can use
+Let's see how particle filtering might manifest computationally. To get the code for today you will need to make sure your environment is setup with matplotlib and scipy. 
 
 {% include codeHeader.html %}
 ```bash
-pip3 show matplotlib scipy
+python3 -m pip install --upgrade pip --break-system-packages
+python3 -m pip install --no-cache-dir --upgrade numpy --break-system-packages
+python3 -m pip install --no-cache-dir --upgrade scipy --break-system-packages
+python3 -m pip install --no-cache-dir --upgrade matplotlib --break-system-packages
 ```
 
-If you get any warnings about package(s) not found, you can install them with ``pip3``.  For example, if you didn't have either package, you can use the following command to install the necessary libraries.
-
-{% include codeHeader.html %}
-```bash
-pip3 install matplotlib scipy
-```
-
-Additionally, if you haven't done so yet, clone [the class activities are resources repo](https://github.com/comprobo25/class_activities_and_resources) into your ``ros2_ws/src`` folder.  If you've already cloned it, make sure to do a ``git pull origin main``.
+Additionally, if you haven't done so yet, clone [the class activities are resources repo](https://github.com/comprobo26/class_activities_and_resources) into your ``ros2_ws/src`` folder.  If you've already cloned it, make sure to do a ``git pull origin main``.
 
 Next, make sure to build your workspace and source your ``install/setup.bash`` file.
 
@@ -74,6 +69,7 @@ $ cd ~/ros2_ws
 $ colcon build --symlink-install
 $ source install/setup.bash
 ```
+
 ### Launch a Simulated World
 To try things out, let's first startup a 1d simulation of the world. 
 
@@ -147,4 +143,4 @@ Steps 3 and 5 are typically considered the "tricky" ones to implement. Let's tak
 Group up with the folks around you, and have a look at the code for the ``simple_particle_filter`` demo we ran earlier in class. Diagram out the code and topics...can you map different functions/classes of the code to the high-level steps we've outlined in class? What are you noticing about the implementation? What questions do you have about the techniques used?
 
 ## Project Kick-Off
-Starting today, the particle filter project is a-go! There is [skeleton code available for this project](https://github.com/comprobo25/robot_localization), which I recommend you have a look at now. The rest of this class will be studio time for team formation and getting started with your first deliverable (a conceptual overview).
+Starting today, the particle filter project is a-go! There is [skeleton code available for this project](https://github.com/comprobo26/robot_localization), which I recommend you have a look at now. The rest of this class will be studio time for team formation and getting started with your first deliverable (a conceptual overview).

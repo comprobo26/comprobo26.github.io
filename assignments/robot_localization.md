@@ -331,6 +331,11 @@ You have complete latitude for choosing your approach to particle filtering. Whi
 * Implementing different filtering techniques, based on optimization schemes (e.g., Kalman Filtering, Extended Kalman Filtering, etc.).
 * Considering how different robot behaviors may impact localization quality.
 * Attempting to implement a bare-bones SLAM (simultaneous localization and mapping) pipeline (or running an open-source technique and comparing it to your localization-only technique).
+* Solving the robot kidnapping problem (unknown starting location).
+* Re-implementing the parts of the filter that were provided in the skeleton code.
+* Implementing ray tracing instead of using a likelihood field.
+* Designing your particle filter to be more computationally efficient.
+* Making your robot fully autonomous by moving it based on pose uncertainty.
 
 ## Project Advice
 

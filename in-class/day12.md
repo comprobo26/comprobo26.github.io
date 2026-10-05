@@ -1,5 +1,5 @@
 ---
-title: "Beyond Particle Filtering // Intro to Machine Vision"
+title: "Beyond Particle Filtering"
 toc_sticky: true
 toc_data:
   - title: Today
@@ -10,8 +10,6 @@ toc_data:
     link: in-class/day12/#localization-share
   - title: Beyond Particle Filtering
     link: in-class/day12/#beyond-particle-filtering
-  - title: Machine Vision Kick-Off
-    link: in-class/day12/#machine-vision-kickoff
 ---
 
 # WORK IN PROGRESS! CHECK BACK FOR UPDATES!

@@ -144,9 +144,9 @@ Note: Subject to change as the semester unfolds!
 * [Day 7: Discussion Frameworks // The Particle Filter for Robot Localization](in-class/day07)
 * [Day 8: AI and Robotics I // Conceptual Particle Filter](in-class/day08)
 * [Day 9: Broader Impacts Discussions I // Conceptual Particle Filter](in-class/day09)
-* [Day 10: AI and Robotics II // Bayesian Estimation](in-class/day10)
-* [Day 11: Debugging Strategies and Extensions // Studio](in-class/day11)
-* [Day 12: Beyond Particle Filtering and Studio](in-class/day12)
+* [Day 10: AI and Robotics II // Re-Sampling and Pose Estimation](in-class/day10)
+* [Day 11: Debugging Strategies and Extensions // Bayesian Fundamentals](in-class/day11)
+* [Day 12: Beyond Particle Filtering: Kalman Filters](in-class/day12)
 
 ### Machine Vision (+ Influences on Robotics Development Discussions)
 * [Day 13: Localization Debrief // Machine Vision Project Ideation](in-class/day13)

@@ -1,49 +1,42 @@
 ---
-title: "Applications II // Bayesian Estimation"
+title: "AI and Robotics II // Re-Sampling and Pose Estimation"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day10/#today
   - title: For Next Time
     link: in-class/day10/#for-next-time
-  - title: Applications II Discussion
-    link: in-class/day10/#applications-ii
-  - title: Bayesian Estimation Mini-Lecture
-    link: in-class/day10/#bayesian-estimation
-  - title: Breakout Sessions + Studio
-    link: in-class/day10/#breakout-sessions
+  - title: AI and Robotics II Discussion
+    link: in-class/day10/#ai-and-robotics-ii
+  - title: Re-Sampling and Pose Estimation
+    link: in-class/day10/#re-sampling
+  - title: Studio
+    link: in-class/day10/#studio
 ---
 
-# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
-
-
 ## Today
-* Broader Impacts Applications II Discussions
-* Mini-Lecture on Bayesian Estimation
-* Studio Time and Breakout Sessions -- 
-  * Computing Relative Motion
-  * Likelihood Models
-  * Details of a Bayes Estimation
+* AI and Robotics II Discussion: Reinforcement and Active Learning
+* Re-Sampling and Pose Estimation
+* Studio Time
  
 ## For Next Time
 * Work on the [Robot Localization project](../assignments/robot_localization)
-  * Demos due on **Thursday October 16 by Class**
-  * Code + Writeups due on **Friday October 17th 7PM**
-* Review your Broader Impacts Phase 1 feedback (emailed)
-* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/kPjvgWb4ETDKMHRD7)
+  * Demos due on **Monday October 19 by Class**
+  * Code + Writeups due on **Tuesday October 20th 7PM**
+  * Reflection due by **Tuesday, October 27th 7PM**
+* Review your Broader Impacts Phase 1 feedback (emailed later today)
 
-## Applications II: AI x Robotics - Dealing with Novelty
+
+## AI and Robotics II - Dealing with Novelty
 Last time we talked a bit about different ways of thinking about AI applied to robotic systems, and one challenge with directly implementing modern AI systems (e.g., genAI or large supervised models) on robots: novelty.
 
 Within the realm of AI tools, there are two that have been widely adopted in robotics to attempt to address the novely problem: reinforcement learning and active learning. In this activity, we're going to learn a bit more about one of these techniques and consider their implications of use. 
 
 To begin, in your table group, decide whether you would like to learn more about reinforcement learning or active learning; there will be an info exchange with another group so don't worry too much about missing out! Once you've made your decision, follow-along with the corresponding activity below.
 
-Every individual shoud also be taking notes during the discussion [in this survey](https://forms.gle/s5mZ2TtnycqyPVgE6).
-
 ### Reinforcement Learning
 Let's start with a definition of reinforcement learning:
-> An agent (robot) develops a policy for interacting with the world / performing some task, based on many interactions and recieving a penalty or reward.
+> An agent (robot) develops a policy for interacting with the world and performing some task, based on many interactions and receiving a penalty or reward.
 
 In other words, RL for a robot is learning how to do a task through trial and error. For those interested, you can read a lot more [in this IJRR survey paper on the topic](https://www.ri.cmu.edu/pub_files/2013/7/Kober_IJRR_2013.pdf).
 
@@ -52,11 +45,10 @@ In other words, RL for a robot is learning how to do a task through trial and er
   * What would a trial look like for that robot? What metrics would determine when a trial was "over" and could be scored?
   * How would a robot label a trial as "successful" for that task?
 
-
 In Robotic RL, there is a set of well known "curses" that make implementation challenging:
   * **The Curse of Dimensionality**: problems often scale exponentially in the number of dimensions to compute optimal policies over
   * **The Curse of Real-World Samples**: robot hardware is expensive (and typically one-off!), suffers from wear and tear, and is in a really noisy, partially observable environment
-  * **The Curse of Abstraction and Model Uncertainty**: all models are wrong, some are useful, and its challenging to know what "useful" means
+  * **The Curse of Abstraction and Model Uncertainty**: all models are wrong, some are useful, and it is challenging to know what "useful" means
   * **The Curse of Goal Specification**: we reward a robot for doing a "good job" but need to have a formalism for what the job is in order to assess it; but many jobs are complex and hard to define
 
 **Discussion Question 2**: For the robot you've discussed, let's think about some of these curses:
@@ -64,7 +56,7 @@ In Robotic RL, there is a set of well known "curses" that make implementation ch
   * How might you think about addressing this curse? Some things to consider: simulation tools, problem simplification, task subdivision and composition, embedding prior knowledge, etc.
   * What might the cost (in time, money, energy, people, task...) be for implementing this work-around for your robot? Do you think it would be worthwhile? Why or why not?
 
-For robots operating in real-world conditions, there is almost always some risk of encountering something novel -- something outside of a training set or only rarely seen in that training set. A lot of [modern research in AI](https://news.mit.edu/2022/machine-learning-biased-data-0221) has focused on how to eliminate bias or leverage diversity in datasets for better performance.There are a lot of design considerations one needs to make as a software engineer and a robot operator to decide what method will be best for a particular system.
+For robots operating in real-world conditions, there is almost always some risk of encountering something novel -- something outside of a training set or only rarely seen in that training set. A lot of [modern research in AI](https://news.mit.edu/2022/machine-learning-biased-data-0221) has focused on how to eliminate bias or leverage diversity in datasets for better performance. There are a lot of design considerations one needs to make as a software engineer and a robot operator to decide what method will be best for a particular system.
 
 **Discussion Question 3**: Finally, let's consider the implications of training your robot with RL systems:
   * How might you shape the training set for your robot system, and why? Some options could include: over-sampling "rare instances" to be more equal with typical instances, starting with a strong prior distribution over known task examples, add noise to all samples, etc.
@@ -74,7 +66,7 @@ For robots operating in real-world conditions, there is almost always some risk 
 
 ### Active Learning
 Let's start with a definition of active learning:
-> An agent (robot) develops a policy for interacting with the world / performing some task, while engaged in that activity, by seeking out informative interactions.
+> An agent (robot) develops a policy for interacting with the world and performing some task, while engaged in that activity, by seeking out informative interactions.
 
 In other words, active learning for a robot allows the robot to make strategic, informative experiments to help it complete its given task. For those interested, you can read a lot more [in this Mechatronics paper on the topic for robotic control](https://tberrueta.github.io/assets/pdfs/TaylorMechatronics2021.pdf).
 
@@ -108,40 +100,50 @@ We're going to mix up the groups so you can talk to some RL folks and some Activ
 
 
 
-## Bayesian Filtering and the Particle Filter
+## Re-Sampling and Pose Estimation
+Re-call the form of the particle filter we've been discussing:
 
-> Legacy notes about Bayes Filters and the Particle Filter from Paul Ruvolo are available: [as a video lecture](https://www.youtube.com/embed/l7CrjOTlioU) and as [physical notes](updated_bayes_filter.pdf). 
+1. **Initialize** Given a pose (represented as $$x, y, \theta$$), compute a set of particles.
+2. **Motion Update (AKA Prediction)** Given two subsequent odometry poses of your robot, update your particles.
+3. **Observation Update** Given a laser scan, determine the confidence value (weight) assigned to each particle.
+4. **Guess (AKA Correction)** Given a weighted set of particles, determine the robot's pose.
+5. **Iterate** Given a weighted set of particles, sample a new set.
 
-> Slides walking through our in-class derivation [here](https://docs.google.com/presentation/d/1ekeHfD7YOJLc6mHo8z4BHfnu2JCXtsvNfszsGDPM4Js/edit#slide=id.p).
-
-For your projects, you're implementing a particle filter, which is a subclass of algorithm under the more general category of _Bayesian filters_. A Bayesian filter is a recursive, or sequential, algorithm -- for localization, this means that the robot's state estimate is refined iteratively as observations or actions are taken.
-
-There is a bit of vocabulary to know before we get started:
-* Markov process: a chain of events in which the probability of each event depends only on the state of the previous event ("what happens next only requires me to think about what's happening now")
-  * This is a useful _assumption_ about the way the world works, because now we don't have to consider the entire history of a robot, just what happened most recently.
-* Monte Carlo algorithms: repeated random sampling is used to estimate a solution to a complex (often nonlinear) problem
-
-We're going to walk through the steps of the Bayesian filter:
-```
-Steps of a Bayesian Filter:
-1) Initialize with an estimate of the first pose
-2) Take an action, and predict the new pose based on the motion model
-3) Correct the pose estimate, given an observation
-4) Repeat steps 2 and 3, ad nauseum (or until your robot mission is over)
-```
-
-### Prediction
-During the prediction step, the current estimated pose of the robot is updated based on a _motion model_. The motion model captures how a control input may be mapped to the real world (what noise may be applied, for instance). Prediction will always increase the uncertainty we have about where the robot is in the world (unless we have perfect motion knowledge). Prediction asks: given where I think I am, where will I end up after I take this action?
-
-### Correction
-To reduce (or attempt to reduce) our uncertainty, we can look around us with an _observation model_ (which will also capture noise in our measurements). Correction asks: given what I am measuring, what is my likely pose based on my estimate of where I may be?
-
-### Mathematical Details
-In the breakout session, we'll walk through the mathematical details of this for a simple world in which a robot can open and close a door, and can measure whether a door is open or closed. This example is borrowed from [Probabilistic Robotics](https://docs.ufpr.br/~danielsantos/ProbabilisticRobotics.pdf); a highly influential book in modern robotics.
-
-### The Particle Filter
-A Bayesian filter, in its purest form, asks us to work with continuous probability distributions, and that is computationally challenging (nigh intractable) most of the time for practical robotics problems. The particle filter addresses these computational challenges by allowing us to _draw samples from our probability distributions_ and apply our prediction and correction steps to each of those samples in order to get an empirical estimate of a new probability distribution. In this way, the particle filter is a Monte Carlo algorithm, and leverages the law of large numbers to "converge" towards the optimal answer. (You can get a sense about why sampling works to find complex distributions by [playing with this applet](http://chi-feng.github.io/mcmc-demo/app.html?algorithm=GibbsSampling&target=banana)).
+So far, we've talked through the details of the Motion Update and Observation Update; today we'll talk about the remaining steps that are focused on how we can interpret and work with our weighted set of particles (which we get following the Observation Update).
 
 
-## Breakout Sessions
-To learn more about the fundamental theory behind Bayesian Estimation, feel free to stick around in the classroom; if you'd like to continue working through the Motion Model, Likelihood Model, or particle filter project, you can work on self-study next door!
+### Pose Estimation
+Remember: the whole point of our particle filter is to estimate where the robot is. Our "Guess" step is how we estimate the robot's pose. Formally, the problem can be stated as _given a set of weighted particles, what is the most likely pose of our robot?_
+
+There are many common choices for interpreting weighted particles into a single best estimate:
+
+* Choosing the single "best" particle
+* Computing a weighted average of the "best" N particles
+* Computing a simple average of the "best" N particles
+
+*With your project partner* discuss what the trade-offs might be for each of these methods under the following scenarios:
+
+* Uniformly weighted particles across a map
+* Several clusters of highly weighted particles across a map
+* A single cluster of highly weighted particles across a map
+
+
+### Re-Sampling
+Our particle weights tell us something about how well different poses meet the history of observations we've collected about our Neato's motion and observations. At every iteration of the filter, we want to refine the location of our guesses based on promising areas of our state space. We can use the particle weights as an indicator of these "good guess" locations in the map. 
+
+A simple method for re-sampling that leverages the _distribution of particle weights_ we just computed is to translate the weights of particles into a frequency by which they can appear for re-sampling. Consider the following:
+
+![Resampling based on weights](../website_graphics/resampling.png)
+
+Here, the weights are used to establish the frequency by which a particle might appear in a hypothetical dataset, which is then sampled to draw new particles for the next iteration of the filter. There are other ways you might consider implementing a weighted re-sampling procedure, but the intuition here is important: the weight of a particle influences how frequently it might appear in a re-sampled dataset.
+
+Re-sampling like this isn't enough though. Consider: do we want multiple copies of the _same exact particle_ in our next dataset? No! That would be really silly. So we need to modify our particles in some way. A common choice is to add a little [Gaussian white noise](https://en.wikipedia.org/wiki/White_noise) to a particle to modify it's exact location. This will have the effect of creating a dense "cloud" around the original best-weighted particle location. This is very desireable -- remember that our best-particle isn't EXACTLY where the robot is, and we want to refine our estimate. Taking little steps around our best guess is a good way of increasing our precision/accuracy.
+
+There is one last practicality we need to consider. It's called [particle depletion or degeneracy](https://arxiv.org/pdf/2511.01281). This is when our particles collapse _too much_ into a guess that's...well...a little wrong. When we resample in the method suggested, in some cases, our particles might quickly converge to an estimate that might turn out to be a poor one. We'd like to be robust to this. There are many ways this can be addressed, but an easy one is to _inject random particles_ each iteration that are drawn uniformly across a state space. The exact portion of particles drawn this way can be an experimental parameter.
+
+*With your project partner* discuss how you might modify your current re-sampling strategy with weighted re-sampling, noise addition, and particle degeneracy in mind. How might you set meta-parameters which control the randomness you'll inject or noise you add?
+
+
+
+## Studio Time
+Please use this time to review the feedback on your Conceptual Overview and work with your partner on particle filter implementation! The course staff will be around to talk through your feedback and standing questions you might have.

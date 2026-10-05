@@ -68,7 +68,7 @@ For robots operating in real-world conditions, there is almost always some risk 
 Let's start with a definition of active learning:
 > An agent (robot) develops a policy for interacting with the world and performing some task, while engaged in that activity, by seeking out informative interactions.
 
-In other words, active learning for a robot allows the robot to make strategic, informative experiments to help it complete its given task. For those interested, you can read a lot more [in this Mechatronics paper on the topic for robotic control](https://tberrueta.github.io/assets/pdfs/TaylorMechatronics2021.pdf).
+In other words, active learning for a robot allows the robot to make strategic, informative experiments to help it complete its given task. For those interested, you can read a lot more [in this Mechatronics paper on the topic for robotic control](https://arxiv.org/abs/2106.13697).
 
 In active learning, a robot needs to be able to keep track of a model of the world/environment it is in, and how its actions impact that world (and lend itself towards as task). This is known as keeping a *belief* representation over the world. You can think about this as a list of facts that a robot is discovering about itself or the world as it experiments. The process of generating a good belief representation is critical: this is what it will use to eventually plan out the action policies it will use when given a task to perform.
 

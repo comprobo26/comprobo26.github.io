@@ -63,19 +63,19 @@ Examples of robots selected during CompRobo 2024 and 2025 included:
 
 
 
-<!-- ## Part 2: Discussion
+## Part 2: Discussion
 
 Like any technological system, a robot can carry different meaning or connotation to different people; and like any implemented infrastructure, the impact of a robot can vary across contexts, individuals, and cultures. In Phase 1, we had the opportunity pick a robot and present it to a small group + hear about other robot systems. This assignment asks you to go deeper in these discussions, and do the following:
 
-* Perform deeper research on your robot, iterating from Phase 1 questions and feedback, and your own reflections from those discussions
-* Define an aspect of your robot that has "gray" implications (whether this is about a specific design decision and how it impacts intended use, the typical market for the robot, weighing opportunities with potential costs, public perception, etc.)
-* Lead an advanced (socio)technical discussion about your robot and its "gray" facet with peers
+* Perform deeper research on your robot, iterating from Phase 1 questions and feedback, and your own reflections from those discussions.
+* Define an aspect of your robot that has "gray" implications (whether this is about a specific design decision and how it impacts intended use, the typical market for the robot, weighing opportunities with potential costs, public perception, etc.). We strongly recommend using the [ethics screening tool](../How to/ethics_screening_tool.md) to help you reflect on these aspects.
+* Lead an advanced (socio)technical discussion about your robot and its "gray" facet with peers.
 
 The aim of this assignment is to (1) practice presenting technical systems to an audience of peers, (2) practice leading an open-ended discussion, and (3) challenge your own or others' perspectives about your chosen robot.
 
 ### Logistics
 
-We will reserve an in-class day to get into small groups of ~3 people for the discussion period. Everyone will present on this day. An attempt will be made to provide teams with external monitors for presenting in their clusters, but it is recommended that teams potentially bring their own external monitors, or individual be prepared to display visual material on their laptop screens.
+We will reserve an in-class day to get into small groups of ~3 people for the discussion period. Everyone will present on this day and be allocated 15 total minutes of time. An attempt will be made to provide teams with external monitors for presenting in their clusters, but it is recommended that teams potentially bring their own external monitors, or individual be prepared to display visual material on their laptop screens.
 
 ### Preparation / Materials
 
@@ -114,7 +114,7 @@ Leading a discussion is an art and science, and there is no one "right" way to l
 
 
 
-## Part 3: Reflection
+<!-- ## Part 3: Reflection
 
 This part of the assignment provides an opportunity to consider how you, as an engineer, will build systems that affect you, the environment, and society. It will be [submitted on Canvas](https://canvas.olin.edu/courses/942/assignments/16065). You are asked to prepare two artifacts: 
 

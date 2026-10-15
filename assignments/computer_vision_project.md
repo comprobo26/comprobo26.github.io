@@ -6,7 +6,6 @@ toc_h_max: 3
 ---
 
 ## Abstract
-
 So far, you have successfully programmed robots using reactive control strategies and taken a deep dive into the robot localization problem. Next, you will be learning about machine vision and the role it plays in robotics. In contrast to previous project, this time you will have a great deal of freedom to shape your project towards your interests and learning goals.
 
 ## Learning Objectives
@@ -14,15 +13,13 @@ So far, you have successfully programmed robots using reactive control strategie
 * Implementing a robotics system with minimal scaffolding.
 
 ## Teaming
-For this project, you can work with one other student.  If you want to have a team of three, please talk to the instructors beforehand.
-
-Please fill out <a href="https://docs.google.com/spreadsheets/d/1O2spOQ5pVBngERezDvuG5-YXpvC3O52nYzG-_t0pqLY/edit?usp=sharing">this Google Sheet</a> when you have a project team and Github repo, and add yourself to a Canvas Group!
+For this project, you can work with one other student.  If you want to have a team of three, please talk to the instructor beforehand. Please [add yourself to a Canvas group](https://canvas.olin.edu/courses/1070/groups#) as soon as you have a team!
 
 
 ## Project Topic
-Your project should be about machine vision and its intersection with robotics.  You will carry out that project either using a robot simulator, a computer vision dataset, the Neato, an external camera system, or some combination.
+Your project should be about machine vision and its intersection with robotics. You will carry out that project either using a robot simulator, a computer vision dataset, the Neato, an external camera system, or some combination.
 
-In your project proposal you will be coming up with an implementation plan.  That is, if you are using a particular algorithm to solve a problem, which parts of the algorithm will you implement, and which will you use pre-built implementations for?  Be strategic in these decisions to balance learning about algorithms with system building (e.g., programming the simulated Neatos (or another robot) to do something interesting).  You have substantial latitude in shaping your project to focus on the parts you really want to learn (e.g., system design versus basic understanding of algorithms). That said, we expect that you will do some exploration of algorithms as part of this project (which could include implementation or perhaps substantial learning about an algorithm or class of algorithms).
+In your project proposal, you will outline your project motivation, scope, and implementation and testing plan. You have substantial latitude in shaping your project to focus on the parts of modern or classical machine vision topics you really want to learn (e.g., system design versus basic understanding of algorithms). We expect that you will do some exploration of algorithms as part of this project (which could include implementation or perhaps substantial learning about an algorithm or class of algorithms), and will need to be strategic in your implementation to balance learning with building.
 
 ### Potential Algorithm Topics
 * Object tracking or detection
@@ -49,44 +46,48 @@ You may want to use an external dataset for your project. Here are some possible
    * Pick any open dataset of imagery in a domain of interest to you (e.g., for ocean biology [FathomNet](https://fathomnet.org/fathomnet/#/) is a nice option; for city landscapes [Cityscapes](https://paperswithcode.com/dataset/cityscapes) could be good; for food check out [Food-101](https://paperswithcode.com/dataset/food-101)...and so on!)
    * A lot these datasets are big and fancy, but don't be afraid to start with smaller, more classic datasets. That's a great way to learn without having to deal with the greater complexity that comes with some of this data.
 
-Finally, you could go all-in on sensor/perception only (abstracting away a robot) if you'd like to get deep in the weeds on a particular vision-based processing algorithm or fundamental piece of theory (note: the connection to robotics MUST be clear, however). For this, we have two ZED 2i stereo cameras available, and you can use your computer webcam, your phone camera/lidar, or any other visual sensor you may have access to.
+Finally, you could go all-in on sensor/perception only (abstracting away a robot) if you'd like to get deep in the weeds on a particular vision-based processing algorithm or fundamental piece of theory (note: the connection to robotics MUST be clear, however). For this, we have one ZED 2i stereo cameras available, and you can use your computer webcam, your phone camera/lidar, or any other visual sensor you may have access to.
 
 ## Deliverables
 
 There are four deliverables for this project.
 
-### Project Proposal (due 10/22 7PM)
+### Project Proposal (due 10/21 9PM)
 
-At a minimum, please include the answers to the following questions. You should include enough detail for us to be able to give you useful feedback. [Submit your proposal on canvas](https://canvas.olin.edu/courses/942/assignments/16077).
+At a minimum, please include the answers to the following questions. You should include enough detail for us to be able to give you useful feedback. [Submit your proposal on canvas](https://canvas.olin.edu/courses/1070/assignments/20108).
 
 * Who is on your team?
 * What is the main idea of your project?
 * What are your learning goals for this project?
 * What algorithms or computer vision areas will you be exploring?
-* What components of the algorithm will you implement yourself, which will you use built-in code for?  Why?
-* What is your MVP?
-* What is a stretch goal?
+* What real-world applications will you be examining related to your proposed project?
+* What components of the algorithm will you implement yourself, which will you use pre-built code for?  Why?
+* What is your MVP? What is a stretch goal?
+* How will you test and evaluate your code?
 * What do you view as the biggest risks to you being successful (where success means achieving your learning goals) on this project?
 * What might you need from the teaching team for you to be successful on this project?
 
-### In-class Presentation / Demo (11/10 in class)
+### In-class Presentation / Demo (11/09 in class)
 
 We'd like each team to spend about 10 minutes presenting what they did for this project. You can structure the presentation in whatever manner you'd like, however, you should try to meet these goals:
 
-* Explain the goal of your project
-* At a high-level explain how your system works
+* Explain your project and motivation
+* Describe your technical approach, including key design decisions
 * Demonstrate your system in action (either in a video [recommended] or live). If your system doesn't work completely yet, that is fine, try to show at least one component of your system in action.
+* Note limitations of the implementation
+* Give real-life uses of the topics covered in your project
+* Highlight lessons learned
 * This presentation / demo should be very informal. This presentation will be assessed in a purely binary fashion (basically did you do the things above).
 
-Please [submit your presentation on canvas](https://canvas.olin.edu/courses/942/assignments/16071).
+Please [submit your presentation on canvas](https://canvas.olin.edu/courses/1070/assignments/20102).
 
-### Code (Due 11/11 at 7PM)
+### Code (Due 11/10 at 7PM)
 
-* You should turn in your code and writeup via Github. [Submit a link on canvas when you're all set](https://canvas.olin.edu/courses/942/assignments/16066)!
+* You should turn in your code and writeup via Github. [Submit a link on canvas when you're all set](https://canvas.olin.edu/courses/1070/assignments/20097)!
 
-### Writeup (Due 11/11 at 7PM)
+### Writeup (Due 11/10 at 7PM)
 
-In your code package create a ``README.md`` file to hold your project writeup.  Your writeup should touch on the following topics. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``).
+In your code package create a ``README.md`` file to hold your project writeup. We expect this writeup to be done in such a way that you are proud to include it as part of your professional portfolio. As such, please make sure to write the report so that it is understandable to an external audience.  Make sure to add pictures to your report, links to Youtube videos, embedded animated Gifs (these can be recorded with the tool ``peek``). Your writeup should touch on the following topics: 
 
 * What was the goal of your project?  Since everyone is doing a different project, you will have to spend some time setting this context.
 * How did you solve the problem (i.e., what methods / algorithms did you use and how do they work)?  As above, since not everyone will be familiar with the algorithms you have chosen, you will need to spend some time explaining what you did and how everything works.
@@ -94,6 +95,7 @@ In your code package create a ``README.md`` file to hold your project writeup.  
 * What if any challenges did you face along the way?
 * What would you do to improve your project if you had more time?
 * Did you learn any interesting lessons for future robotic programming projects? These could relate to working on robotics projects in teams, working on more open-ended (and longer term) problems, or any other relevant topic.
+* How does your project relate to real-life robotic systems?
 
 
 ## Resources and Potential Project Directions
@@ -131,6 +133,21 @@ In-Class Activities from Past CompRobo Offerings and Other Tutorials
 * <a-no-proxy href="https://scipy.github.io/old-wiki/pages/Numpy_Example_List.html">Numpy Examples List</a-no-proxy>
 
 ### Past projects to draw from
+
+* Machine Vision Projects from Fall 2025
+   * [ScreenReader](https://github.com/tabitha-davison/machine-vision)
+   * [SLAM Teach-In](https://github.com/Sailboy42/MV-SLAM-Exploration)
+   * [Visual Odometry](https://github.com/JLjoestar23/visual_odometry)
+   * [Estimating Bike Routes from Handlebars](https://github.com/ananthrkutuva/machine-vision)
+   * [Basketball Tracker](https://github.com/Zaraius/basbetball-tracker)
+   * [Playing Root I](https://github.com/b-wager/root-machine-vision)
+   * [Playing Root II](https://github.com/GrantSRechtin/TheRootOfComputerVision)
+   * [Neato Golf](https://github.com/swisnoski/neato_golf)
+   * [Attempting to Beat Traffic](https://github.com/flipper-slipper/traffic-optimizer.git)
+   * [Object Tracking](https://github.com/bugsyflyer/Machine-Vision)
+   * [Visual SLAM](https://github.com/julakshah/visual-slam/)
+   * [Playing Pool](https://github.com/redhotchili0909/comp-robo/tree/main/eightball_vision)
+   * [Magic Maze Solver](https://github.com/Tchenzie/machine_vision_project?tab=readme-ov-file)
 
 * Machine Vision Projects from Fall 2024
    * [3D Gaussian Splatting Deep Dive](https://github.com/eddydpan/3D-gaussian-splatting)

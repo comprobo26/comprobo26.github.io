@@ -26,7 +26,7 @@ toc_data:
   * Reflection due by **Tuesday, October 27th 7PM**
 * Review your Broader Impacts Phase 1 feedback (emailed)
 * Review the project description for [Broader Impacts Phase 2](../assignments/broader_impacts)
-  * In class discussions on **Monday November 2md**
+  * In class discussions on **Monday November 2nd**
   * Materials due **Tuesday November 3rd** (See [Canvas Page](https://canvas.olin.edu/courses/1070/assignments/20095))
 
 

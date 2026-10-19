@@ -150,9 +150,9 @@ Note: Subject to change as the semester unfolds!
 
 ### Machine Vision (+ Influences on Robotics Development Discussions)
 * [Day 13: Localization Debrief // Machine Vision Project Ideation](in-class/day13)
-* [Day 14: Applications III // Neato Soccer + Discuss Project Proposals](in-class/day14)
-* [Day 15: Keypoints // Studio Time](in-class/day15)
-* [Day 16: CA Lecture: Light Fields // Camera Calibration // Studio Time](in-class/day16)
+* [Day 14: Human-Robot Interaction I // Neato Soccer + Discuss Project Proposals](in-class/day14)
+* [Day 15: Human-Robot Interaction II // Keypoints](in-class/day15)
+* [Day 16: CA Lecture: Light Fields // Camera Calibration](in-class/day16)
 * [Day 17: Broader Impacts Discussions II // Image Segmentation](in-class/day17)
 * [Day 18: Studio Time](in-class/day18)
 * [Day 19: Machine Vision Showcase + Final Project Kickoff](in-class/day19)

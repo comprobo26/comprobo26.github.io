@@ -25,6 +25,26 @@ toc_data:
     * Project Materials are due on **Tuesday November 11th at 7PM**
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
+## Human-Robot Interaction: Search and Rescue Continued
+
+### Setting Standards for SAR
+In the US, the Federal Emergency Management Agency (FEMA), Homeland Security, and the Department of Defense are among the largest customers of SAR robots. In partnership with NIST (the National Institute of Standards and Technology), the guidelines for an effective/useable SAR system for urban environments has been defined ([you can read more here](https://www.nist.gov/system/files/documents/el/isd/ks/Prelim_Requirements_Report.pdf)) and covers the following:
+
+* Human-System Interaction (23 requirements)
+* Logistics (10 requirements)
+* Operating Environment (5 requirements)
+* System (physical robot) (65 requirements; 32 of which are for sensing)
+
+One of the fascinating things about these requirements is that "Human-System Interaction" primarily covers the _robot operator_ but not the interaction with a possible human rescuee. In your small groups, consider the following questions from the perspective of a NIST engineer tasked with setting requirements for a SAR robot (I recommend picking one or two to focus on):
+
+* What would/should official standards for Human-System Interaction cover for the rescuee of a SAR robot? 
+  * You may want to consider: interfaces (virtual, sensory, or physical); accessibility; meta-safety; inclusivity...
+* How would these standards interact with your robot's sensors? Algorithms?
+  * You may want to consider: role of automation/autonomy; consequences of perceptual limitations; edge-cases for perception choices; introduction of bias (implicit or explicit); verifiability; explainability...
+* Who should be involved in co-designing this set of standards for this group of stakeholders?
+  * The current standards were set based on several workshops with experts in the field (peep the list in the linked report above...notice anything interesting about this group?)
+* What tests would need to be designed to assess whether a robot met these standards?
+
 
 ## Keypoints, Descriptors, and Keypoint Matching
 These [slides on keypoints and descriptors](https://docs.google.com/presentation/d/1ULK3Rt7bfijohKa5ZSGI-LJDIPumeGCdq-fGGaJNczg/edit?usp=sharing) provide a detailed look at this topic. As many projects in the class will likely build on the notion of keypoints/descriptors, we highly recommend using this as a resource to learn more!

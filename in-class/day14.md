@@ -1,5 +1,5 @@
 ---
-title: "Applications IV // Neato Soccer"
+title: "Human-Robot Interaction I // Neato Soccer"
 toc_sticky: true
 toc_data:
   - title: Today
@@ -12,31 +12,28 @@ toc_data:
     link: in-class/day14/#neato-soccer
 ---
 
-# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
-
-
 ## Today
 * Application III Discussion: Human-Robot Collaboration: Search and Rescue
 * Neato Soccer + Project Proposal Check-Ins + Studio
 
 ## For Next Time
-* Read over the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 4th at 7PM** 
-  * In class discussions on **Monday November 3rd**
+* Review the project description for [Broader Impacts Phase 2](../assignments/broader_impacts)
+  * In class discussions on **Monday November 2nd**
+  * Materials due **Tuesday November 3rd** (See [Canvas Page](https://canvas.olin.edu/courses/1070/assignments/20095))
 * Read over the [Machine Vision Project Document](../assignments/computer_vision_project).
-    * Project Proposal is due on **Wednesday October 22nd at 9PM**
-    * Project Shareouts will be **Monday November 10th in class**
-    * Project Materials are due on **Tuesday November 11th at 7PM**
-* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
+    * Project Proposal is due on **Wednesday October 21st at 9PM**.
+    * Project Shareouts will be **Monday November 9th in class**
+    * Project Materials are due on **Tuesday November 10th at 7PM**
 
 
-## Applications III: Human-Robot Collaboration: Search and Rescue
-We're going to be discussing a new topic related to the broader applications of robotics: human-robot collaboration. This is a _vast_ space, which covers anything from humans using robots as extensions of themselves (as tools), to humans and robots interacting as equals on collaborative or cooperative teams. 
+## Human-Robot Interaction: Search and Rescue
+We're going to be discussing a new topic related to the broader applications of robotics: human-robot interaction and collaboration. This is a _vast_ space, which covers anything from humans using robots as extensions of themselves (as tools), to humans and robots interacting as equals on collaborative or cooperative teams. 
 
-Today, we're going to start thinking about human-robot collaboration in the context of one of the most cited "uses" of semi-intelligent robotics in modern academic literature: search and rescue. As your discussion unfolds, please fill in [this survey](https://forms.gle/SUFBctEQJAx2t4VN8).
+Today, we're going to start thinking about human-robot interaction in the context of one of the most cited "uses" of semi-intelligent robotics in modern academic literature: search and rescue. As your discussion unfolds, please fill in [this survey](https://forms.gle/YPJDjZ94pVVABrvCA).
 
 
 ### A Scan of the Literature
-In your table groups, open the following link to some open-source ["Search and Rescue" academic literature](https://docs.google.com/document/d/1Kh-o200z_Mka8x0qxfmXLT8NUsOPwWfDQTfnHtcw02g/edit?usp=sharing). Each person should choose a different paper to _skim_ (please don't read the papers in complete detail!). 
+In your table groups, open the following link to some open-source ["Search and Rescue" academic literature](https://docs.google.com/document/d/1MabMjwUcfQHbR7hWKGyxZiroWz9bS72UQuq_gVnEt_k/edit?usp=sharing). Each person should choose a different paper to _skim_ (please don't read the papers in complete detail!). 
 
 As each person skims, take note of the following:
 * Is what is being sought named in the paper?
@@ -66,25 +63,6 @@ For these search and rescue robots you just discussed, consider the following in
 * Assuming that an algorithm is free to use, what evidence should be provided that it works as expected? How should limitations of the algorithm be communicated?
 
 
-### Setting Standards for SAR
-In the US, the Federal Emergency Management Agency (FEMA), Homeland Security, and the Department of Defense are among the largest customers of SAR robots. In partnership with NIST (the National Institute of Standards and Technology), the guidelines for an effective/useable SAR system for urban environments has been defined ([you can read more here](https://www.nist.gov/system/files/documents/el/isd/ks/Prelim_Requirements_Report.pdf)) and covers the following:
-
-* Human-System Interaction (23 requirements)
-* Logistics (10 requirements)
-* Operating Environment (5 requirements)
-* System (physical robot) (65 requirements; 32 of which are for sensing)
-
-One of the fascinating things about these requirements is that "Human-System Interaction" primarily covers the _robot operator_ but not the interaction with a possible human rescuee. In your small groups, consider the following questions from the perspective of a NIST engineer tasked with setting requirements for a SAR robot (I recommend picking one or two to focus on):
-
-* What would/should official standards for Human-System Interaction cover for the rescuee of a SAR robot? 
-  * You may want to consider: interfaces (virtual, sensory, or physical); accessibility; meta-safety; inclusivity...
-* How would these standards interact with your robot's sensors? Algorithms?
-  * You may want to consider: role of automation/autonomy; consequences of perceptual limitations; edge-cases for perception choices; introduction of bias (implicit or explicit); verifiability; explainability...
-* Who should be involved in co-designing this set of standards for this group of stakeholders?
-  * The current standards were set based on several workshops with experts in the field (peep the list in the linked report above...notice anything interesting about this group?)
-* What tests would need to be designed to assess whether a robot met these standards?
-
-
 
 ## Neato Soccer
 This activity is designed to get you up-and-running with OpenCV and ROS with our Neatos to implement a simple sensory-motor loop using image inputs. Let's play some soccer! 
@@ -108,8 +86,9 @@ Next, go to ``Plugins``, then ``Visualization``, and then select ``Image View``.
 ![Rqt_gui showing the Neato camera feed](../website_graphics/rqt_soccer.png)
 
 
+
 ### OpenCV and Images as Arrays
-We're created from starter code in the [``class_activities_and_resources`` repository](https://github.com/comprobo22/class_activities_and_resources). (Be sure to pull from upstream to get the latest!) which you may want to use for this activity. Specifically, you want to look in the ``neato_soccer`` package and modify the node called ``ball_tracker.py``. 
+We're created from starter code in the [``class_activities_and_resources`` repository](https://github.com/comprobo26/class_activities_and_resources). (Be sure to pull from upstream to get the latest!) which you may want to use for this activity. Specifically, you want to look in the ``neato_soccer`` package and modify the node called ``ball_tracker.py``. 
 
 > Activity: Have a look at ``ball_tracker.py`` -- what is being subscribed to? What libraries are being used? What is the architecture of the node?
 
@@ -117,11 +96,12 @@ The starter code leverages the OpenCV library to handle images; currently the no
 
 An OpenCV image is just a numpy array.  If you are not familiar with numpy, you may want to check out these tutorials: [numpy quickstart](https://numpy.org/doc/stable/user/quickstart.html), [numpy for matlab users](https://numpy.org/doc/stable/user/numpy-for-matlab-users.html). Since an image is just an array, you can perform all sorts of standard transformations on your image (rotation, translation, kernel convolutions) just like you would any other matrix!
 
-Run the starter code and you'll see the dimensionality of the ``numpy`` array of your image printed out from ``process_image``.  You'll notice that the encoding of the image is bgr8 which means that the color channels of the 1024x768 image are stored in the order blue first, then green, then red.  Each color intensity is an 8-bit value ranging from 0-255.
+Run the starter code and you'll see the dimensionality of the ``numpy`` array of your image printed out from ``process_image``.  You'll notice that the encoding of the image is bgr8 which means that the color channels of the 1024x768 image are stored in the order blue first, then green, then red. Each color intensity is an 8-bit value ranging from 0-255.
 
 If all went well, you should see an image pop up on the screen that shows both the raw camera feed as well as a color filtered version of the image.
 
 > Note: do pay attention to how OpenCV is being used in your node to generate visualizations. A very easy bug to introduce into your Opencv code is to omit the call to the function ``cv2.waitKey(5)``. This function gives the OpenCV GUI time to process some basic events (such as handling mouse clicks and showing windows).  If you remove this function from the code above, check out what happens.
+
 
 ### Filtering Based on Color
 We want to identify our soccer balls in our streaming images from the Neato. There are many, many, _many_ ways this could be done, but for the purposes of this activity, we'll be performing color-based filtering.
@@ -136,9 +116,9 @@ This code could be placed inside of the ``process_image`` function at any point 
 
 > Activity: Your next goal is to choose a range of values that can successfully locate the ball.  In order to see if your ``binary_image`` successfully segments the ball from other pixels, you should visualize the resultant image using the ``cv2.namedWindow`` (for compatibility with later sample code you should name your window ``binary_image``) and ``cv2.imshow`` commands (these are already in the file, but you should use them to show your binarized image as well).
 
-#### Debugging Tips
 
-Any interaction with Opencv's GUI functios (e.g., ``cv2.namedWindow`` or ``cv2.imshow``) should only be done inside of ``loop_wrapper`` or ``run_loop`` functions (this is because you want to interact with the UI of OpenCV from the same thread).
+#### Debugging Tips
+Any interaction with Opencv's GUI functions (e.g., ``cv2.namedWindow`` or ``cv2.imshow``) should only be done inside of ``loop_wrapper`` or ``run_loop`` functions (this is because you want to interact with the UI of OpenCV from the same thread).
 
 White pixels will correspond to pixels that are in the specified range and black pixels will correspond to pixels that are not in the range (it's easy to convince yourself that it is the other way around, so be careful).
 
@@ -165,7 +145,7 @@ We then added the following mouse callback function.
 
 One piece of good practice when using OpenCV -- especially as you are learning! -- is to use interactive GUI elements to set your function values. Here, you may want to add sliders to set your lower and upper bounds for each color channel interactively.  
 
-> If you're using ROS, you could alternatively use ROS parameters and ``dynamic_reconfigure`` (e.g., see [this example](https://github.com/comprobo22/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach_fancy.py)).
+> If you're using ROS, you could alternatively use ROS parameters and ``dynamic_reconfigure`` (e.g., see [this example](https://github.com/comprobo26/class_activities_and_resources/blob/main/in_class_day04_solutions/in_class_day04_solutions/wall_approach_fancy.py)).
 
 To create an interactive GUI in OpenCV in ROS, you'll want to make some new functions and "callbacks" in your Node. First, add the following lines of code to your ``loop_wrapper`` function:
 
@@ -210,6 +190,7 @@ To convert your RGB image to HSV, all you need to do is add this line of code to
 ```
 
 Once you make this conversion, you can use the ``inRange`` function the same way you did with the BGR colorspace.  You may want to create two binarized images that are displayed in two different windows (each with accompanying sliders bars) so that you can see which works better.
+
 
 ### Dribbling the Ball
 There are probably lots of good methods for controlling your Neato to interact with the ball, but we suggest using a simple proportional controller that considers the "center of mass" of your filtered image to set the angle that the Neato should turn to move towards the ball as a good first step...

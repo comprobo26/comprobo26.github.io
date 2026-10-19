@@ -12,31 +12,30 @@ toc_data:
     link: in-class/day13/#machine-vision-ideation
 ---
 
-# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
-
-
 ## Today
-
 * Localization Project Share-out
 * Machine Vision Project Kick-off
 * Project Ideation, Team Formation, and Proposals
 
 ## For Next Time
-* Read over the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 4th at 7PM** 
-  * In class discussions on **Monday November 3rd**
+* Finish last deliverables on the [Robot Localization project](../assignments/robot_localization)
+  * Code + Writeups due on **Tuesday October 20th 7PM**
+  * Reflection due by **Tuesday, October 27th 7PM**
+* Review the project description for [Broader Impacts Phase 2](../assignments/broader_impacts)
+  * In class discussions on **Monday November 2nd**
+  * Materials due **Tuesday November 3rd** (See [Canvas Page](https://canvas.olin.edu/courses/1070/assignments/20095))
 * Read over the [Machine Vision Project Document](../assignments/computer_vision_project).
-    * Project Proposal is due on **Wednesday October 22nd at 9PM**
-    * Project Shareouts will be **Monday November 10th in class**
-    * Project Materials are due on **Tuesday November 11th at 7PM**
-* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
+    * Project Proposal is due on **Wednesday October 21st at 9PM**.
+    * Project Shareouts will be **Monday November 9th in class**
+    * Project Materials are due on **Tuesday November 10th at 7PM**
 
 
 ## Localization Project Share-Out and Demos
-You all have been working _hard_ on implementing and expanding upon a particle filter. Let's celebrate what's been learned, successes and failures, advice, funny stories, and more. A [shareout deck is available here](https://docs.google.com/presentation/d/1VbeayIDylHz-cvh0v6q-daXl8Rz9PxM3whtINls-i6w/edit?usp=sharing).
+You all have been working _hard_ on implementing and expanding upon a particle filter. Let's celebrate what's been learned, successes and failures, advice, funny stories, and more. A [shareout deck is available here](https://docs.google.com/presentation/d/1i-ijyLCN-ZZ8z3L4OmjX7q-hrJ2XcGC_7kn_clDNIGA/edit?slide=id.g3fbb810163b_0_0#slide=id.g3fbb810163b_0_0).
 
 
 ## Machine Vision Kick-Off
-Today we will be kicking off our next unit: machine vision. Our kick-off discussion can be found in [this Google Slide Deck](https://docs.google.com/presentation/d/1NP8EAXVMJJ0qnbiVAxIoHuYvtrIBAM_dWkKW6YhM9Oc/edit?usp=sharing).
+Today we will be kicking off our next unit: machine vision. Our kick-off discussion can be found in [this Google Slide Deck](https://docs.google.com/presentation/d/1ceDPJW8aVnXfACLnuF4o_ovjGgkmVc56CQnbldQ_o_M/edit?usp=sharing).
 
 
 ## Machine Vision Ideation and Team Formation

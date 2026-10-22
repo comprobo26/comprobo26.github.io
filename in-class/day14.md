@@ -13,7 +13,7 @@ toc_data:
 ---
 
 ## Today
-* Application III Discussion: Human-Robot Collaboration: Search and Rescue
+* Human-Robot Interaction I: Search and Rescue
 * Neato Soccer + Project Proposal Check-Ins + Studio
 
 ## For Next Time

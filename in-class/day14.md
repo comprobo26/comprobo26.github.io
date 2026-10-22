@@ -24,6 +24,7 @@ toc_data:
     * Project Proposal is due on **Wednesday October 21st at 9PM**.
     * Project Shareouts will be **Monday November 9th in class**
     * Project Materials are due on **Tuesday November 10th at 7PM**
+* Please provide feedback and weigh-in on an extra credit opportunity! [Poll](https://forms.gle/zVMMPGQrxwBxWfj86)
 
 
 ## Human-Robot Interaction: Search and Rescue

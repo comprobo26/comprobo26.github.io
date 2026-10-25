@@ -1,22 +1,19 @@
 ---
-title: "CA Lecture: Light Fields // Camera Calibration // Studio Time"
+title: "Human-Robot Interaction II // CA Lecture: Light Fields"
 toc_sticky: true
 toc_data:
   - title: Today
     link: in-class/day16/#today
   - title: For Next Time
     link: in-class/day16/#for-next-time
+  - title: Human-Robot Interaction II Discussion
+    link: in-class/day16/#human-robot-interaction
   - title: CA Lecture - Light Fields
     link: in-class/day16/#ca-lecture-light-fields
-  - title: Camera Calibration
-    link: in-class/day16/#camera-calib
 ---
 
-# WORK IN PROGRESS! CHECK BACK FOR UPDATES!
-
-
 ## Today
-* Discussion
+* Human-Robot Interaction II -- Search and Rescue Continued
 * CA Lecture: 3D Dynamic Reconstruction for Soft Corals with Light Fields
 * Studio Time
 
@@ -30,6 +27,9 @@ toc_data:
 
 
 ## Human-Robot Interaction: Search and Rescue Continued
+Last time, we read a bit of literature about search and rescue robots, and had a discussion around intended use. Today, we're going to further discuss the human-robot interaction element, and specifically think about how we, as engineers, think about creating _formal standards_ for robot performance. 
+
+For our conversation today, please fill in [this survey](https://forms.gle/nFkuGYhFWjea28bF8).
 
 ### Setting Standards for SAR
 In the US, the Federal Emergency Management Agency (FEMA), Homeland Security, and the Department of Defense are among the largest customers of SAR robots. In partnership with NIST (the National Institute of Standards and Technology), the guidelines for an effective/useable SAR system for urban environments has been defined ([you can read more here](https://www.nist.gov/system/files/documents/el/isd/ks/Prelim_Requirements_Report.pdf)) and covers the following:

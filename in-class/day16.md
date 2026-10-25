@@ -16,8 +16,8 @@ toc_data:
 
 
 ## Today
+* Discussion
 * CA Lecture: 3D Dynamic Reconstruction for Soft Corals with Light Fields
-* Camera Calibration (For Your Consideration)
 * Studio Time
 
 ## For Next Time
@@ -29,31 +29,27 @@ toc_data:
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
 
+## Human-Robot Interaction: Search and Rescue Continued
+
+### Setting Standards for SAR
+In the US, the Federal Emergency Management Agency (FEMA), Homeland Security, and the Department of Defense are among the largest customers of SAR robots. In partnership with NIST (the National Institute of Standards and Technology), the guidelines for an effective/useable SAR system for urban environments has been defined ([you can read more here](https://www.nist.gov/system/files/documents/el/isd/ks/Prelim_Requirements_Report.pdf)) and covers the following:
+
+* Human-System Interaction (23 requirements)
+* Logistics (10 requirements)
+* Operating Environment (5 requirements)
+* System (physical robot) (65 requirements; 32 of which are for sensing)
+
+One of the fascinating things about these requirements is that "Human-System Interaction" primarily covers the _robot operator_ but not the interaction with a possible human rescuee. In your small groups, consider the following questions from the perspective of a NIST engineer tasked with setting requirements for a SAR robot (I recommend picking one or two to focus on):
+
+* What would/should official standards for Human-System Interaction cover for the rescuee of a SAR robot? 
+  * You may want to consider: interfaces (virtual, sensory, or physical); accessibility; meta-safety; inclusivity...
+* How would these standards interact with your robot's sensors? Algorithms?
+  * You may want to consider: role of automation/autonomy; consequences of perceptual limitations; edge-cases for perception choices; introduction of bias (implicit or explicit); verifiability; explainability...
+* Who should be involved in co-designing this set of standards for this group of stakeholders?
+  * The current standards were set based on several workshops with experts in the field (peep the list in the linked report above...notice anything interesting about this group?)
+* What tests would need to be designed to assess whether a robot met these standards?
+
+
 ## CA Lecture: 3D Dynamic Reconstruction for Soft Corals with Light Fields
 Today we're going to hear from Vivian on current research work she is conducting on using a unique camera configuration to generate high quality 3D reconstructions of dynamic objects, applied to ecological studies of coral reefs. This is an example of how some of the concepts you're exploring in your machine vision projects can be adapted to frontier research questions. You can follow along [with slides here](https://docs.google.com/presentation/d/1UxAYL3YCDhmglfxgEfTMvhmOqyRLfkY2P92FtGlfPwc/edit?slide=id.g38e10bf72ea_0_13#slide=id.g38e10bf72ea_0_13).
-
-## Camera Calibration (For Your Consideration)
-One of the _essential_ practical aspects of machine vision is camera calibration: knowing the intrinsic and extrinsic parameters of your imaging system. 
-
-* _Intrinsic Calibration_ refers to the sensor and lens characteristics of your imaging system; calibrating here allows you to correct for image distortions. This is a "projective transformation" between your camera coordinates and your image pixel coordinates.
-* _Extrinsic Calibration_ refers to the way in which your imaging system is set up. For instance, if you have two cameras, this would include their relative poses to one another. This is a "rigid transformation" between your world coordinates and your camera coordinates.
-
-### Pinhole Camera Model 
-The "pinhole camera model" is among the most commonly used for performing basic camera calibration. These [slides for today](https://docs.google.com/presentation/d/1jbJkz_u_BJDghaP0nMZa_itgEjCnrFBh6eht8NBBD38/edit?usp=sharing) go through the key details. Please use this as a resource!
-
-### Camera Calibration Resources
-Here are several different tutorials on how to do (intrinsic) camera calibration in ROS2:
-
-* [Using the Camera Calibration module](https://navigation.ros.org/tutorials/docs/camera_calibration.html)
-* [Using the Nav2 module](https://docs.ros.org/en/rolling/p/camera_calibration/tutorial_mono.html)
-* [A Medium Post walk-through](https://medium.com/starschema-blog/offline-camera-calibration-in-ros-2-45e81df12555)
-
-You can also checkout the [brief OpenCV demo](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html) if you'd like to just test this out on your webcam.
-
-Note that you'll need checkerboards for this! You can (and should!) print your own; this [calib.io pattern generator](https://calib.io/pages/camera-calibration-pattern-generator) is an excellent resource!
-
-### Additional Resources
-* An article on <a-no-proxy href="https://www.ri.cmu.edu/pub_files/pub2/willson_reg_1993_1/willson_reg_1993_1.pdf"> What is the Center of an Image? </a-no-proxy> 
-* <a-no-proxy href="https://www.youtube.com/watch?v=nOQvjG7Jbao"> Youtube lecture on pinhole camera model </a-no-proxy> (includes a fun demo on finding the focal length of your phone camera at around 7:30)
-* MatLab has a nice [high-level explainer](https://www.mathworks.com/help/vision/ug/camera-calibration.html) with follow-on articles worth a look. 
 

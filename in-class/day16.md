@@ -52,5 +52,5 @@ One of the fascinating things about these requirements is that "Human-System Int
 
 
 ## CA Lecture: 3D Dynamic Reconstruction for Soft Corals with Light Fields
-Today we're going to hear from Vivian on current research work she is conducting on using a unique camera configuration to generate high quality 3D reconstructions of dynamic objects, applied to ecological studies of coral reefs. This is an example of how some of the concepts you're exploring in your machine vision projects can be adapted to frontier research questions. You can follow along [with slides here](https://docs.google.com/presentation/d/1UxAYL3YCDhmglfxgEfTMvhmOqyRLfkY2P92FtGlfPwc/edit?slide=id.g38e10bf72ea_0_13#slide=id.g38e10bf72ea_0_13).
+Today we're going to hear from Vivian on current research work she is conducting on using a unique camera configuration to generate high quality 3D reconstructions of dynamic objects, applied to ecological studies of coral reefs. This is an example of how some of the concepts you're exploring in your machine vision projects can be adapted to frontier research questions. You can follow along [with slides here](https://docs.google.com/presentation/d/1iQbaGqiTGyobIwltRJK8BIX0jnqd2SL9GzBOckc7Nac/edit?slide=id.g38e10bf72ea_0_13#slide=id.g38e10bf72ea_0_13).
 

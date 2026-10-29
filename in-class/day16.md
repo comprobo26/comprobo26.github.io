@@ -18,12 +18,13 @@ toc_data:
 * Studio Time
 
 ## For Next Time
-* Work on the [Broader Impacts assignment Part 2](../assignments/broader_impacts), due on **November 4th at 7PM** 
-  * In class discussions on **Monday November 3rd**
+* Work on [Broader Impacts Phase 2](../assignments/broader_impacts)
+  * In class discussions on **Monday November 2nd**
+  * Materials due **Tuesday November 3rd** (See [Canvas Page](https://canvas.olin.edu/courses/1070/assignments/20095))
 * Work on the [Machine Vision Project Document](../assignments/computer_vision_project).
-    * Project Shareouts will be **Monday November 10th in class**
-    * Project Materials are due on **Tuesday November 11th at 7PM**
-* Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
+    * Project Shareouts will be **Monday November 9th in class**
+    * Project Materials are due on **Tuesday November 10th at 7PM**
+* Please provide feedback and weigh-in on an extra credit opportunity! [Poll](https://forms.gle/zVMMPGQrxwBxWfj86)
 
 
 ## Human-Robot Interaction: Search and Rescue Continued

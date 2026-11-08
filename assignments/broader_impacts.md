@@ -114,9 +114,9 @@ Leading a discussion is an art and science, and there is no one "right" way to l
 
 
 
-<!-- ## Part 3: Reflection
+## Part 3: Reflection
 
-This part of the assignment provides an opportunity to consider how you, as an engineer, will build systems that affect you, the environment, and society. It will be [submitted on Canvas](https://canvas.olin.edu/courses/942/assignments/16065). You are asked to prepare two artifacts: 
+This part of the assignment provides an opportunity to consider how you, as an engineer, will build systems that affect you, the environment, and society. It will be [submitted on Canvas](https://canvas.olin.edu/courses/1070/assignments/20096). The assignment is graded on completion, clarity, and depth and is worth 20 points as a whole. It is anticipated that this assignment may take ~4-6hrs to complete. You are asked to prepare two artifacts: 
 
 ### Written Reflection
 A 1-page (minimum) written reflection (12pt font, single spacing, Times New Roman, 1" margins) that examines the following questions (these should look somewhat familiar...but we're now considering you, rather than just the robot you've been contemplating):
@@ -127,14 +127,17 @@ A 1-page (minimum) written reflection (12pt font, single spacing, Times New Roma
 * **Assess yourself** -- e.g., how has your thinking changed (or not) about your robot / robots generally over the course of the semester? what questions do you still have about your robot / robots? would you work on your robot or one like this? under what conditions? why or why not?
 * **Resolve** -- e.g., what will you takeaway from CompRobo, and from this assignment?
 
-Your written response need not map to these 5 prompts exactly. You are encouraged to highlight specific anecdotes or artifacts throughout the semester to illustrate your points, draw on course materials, mention or cite other robots you learned about from peers, and use other external resources that you find inspiring or illuminating. Please cite any sources you may choose to include. The assignment is graded on completion, clarity, and depth and is worth 20 points as a whole. It is anticipated that this assignment may take ~4-6hrs to complete. 
+Your written response need not map to these 5 prompts exactly. You are encouraged to highlight specific anecdotes or artifacts throughout the semester to illustrate your points, draw on course materials, mention or cite other robots you learned about from peers, and use other external resources that you find inspiring or illuminating. Please cite any sources you may choose to include.
+
+> It is important to state that an expectation for this written reflection is that you take a clear and direct stance on questions you've been contemplating this semester. While you may still have lingering questions, I would like you to push yourself towards taking a clear stance on several issues. Generating interesting open-ended questions is great, but please do answer some of them.
 
 ### An Ethics and Responsible Use Statement
 Please prepare a statement on the ethical and responsible use of your robot, as though you were a member of the team developing the system. 
 
 There are a few different ways to approach this, for instance:
-* Use the framing on "statement of potential negative societal impacts" based on [this work from CVPR](https://cvpr2022.thecvf.com/ethics-guidelines). We expect that Section 3 won't apply to everyone, but if it does, please address that as well.
+* Use the [ethics screening tool](../How to/ethics_screening_tool.md) to identify stakeholders, team perspectives, and other project management features that would need to be carefully considered for your chosen system.
+* Use the framing on "statement of potential negative societal impacts" based on [this requirement from CVPR](https://cvpr.thecvf.com/Conferences/2025/EthicsGuidelines).
 * Create a version of a [model card](https://arxiv.org/pdf/1810.03993) for your robotic system. Some robotics-oriented headings to add may be related to hardware requirements, use of open-source or closed-source elements within your implementation, and so on. Feel free to use this as a basis for your statement; you don't need to shoe-horn your system directly into the presented format.
 * Review ethical guidelines from several industry companies (e.g., [Boston Dynamics](https://bostondynamics.com/ethics/)) and model your statement after their frameworks (or your own critiques of their frameworks).
 
-In general, your statement(s) should highlight your principles and philosophies on responsible use for the technique or system you have studied. This is your opportunity to coalesce the research you've done and the conversations you've had into a professional format legible to others in the robotics industry. While completing your statement, do consider the balance between the positive aspects of your techniques and the possible negative implications if intended use were violated.  -->
+In general, your statement(s) should highlight your principles and philosophies on responsible use for the technique or system you have studied. This is your opportunity to coalesce the research you've done and the conversations you've had into a professional format legible to others in the robotics industry. While completing your statement, do consider the balance between the positive aspects of your techniques and the possible negative implications if intended use were violated.

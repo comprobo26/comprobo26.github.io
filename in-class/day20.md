@@ -8,6 +8,8 @@ toc_data:
     link: in-class/day20/#for-next-time
   - title: What's Ahead
     link: in-class/day20/#overview-whats-ahead
+  - title: Final Project Advice and AI Norms Activity
+    link: in-class/day20/#project-advice
   - title: Final Project Ideation and Teaming
     link: in-class/day20/#final-project-ideation
 ---
@@ -46,8 +48,11 @@ Welcome to _Day 20_ in CompRobo! As part of planning out your final projects, he
     * You will be assigning your own grade for the YOGA assignment by the Final Event.
 
 
-## Project Ideation and Proposals
+## Final Project Advice and AI Norms Activity
+Discussion slides are [available here](https://docs.google.com/presentation/d/1PTl_43dUe4e6BhHGHeUeR-60SuDL2bg84Eu_hU9-Vig/edit?usp=sharing). Once we've completed our discussion, please fill in [this survey](https://forms.gle/Jirgv7wnopfK4xtm9).
 
+
+## Project Ideation and Proposals
 Take a look at the [final project assignment document](../assignments/final_project) -- today we'll be forming teams, brainstorming project ideas, and starting your project proposals. 
 
 * The project teams can be _up to 5 folks_ for this assignment
@@ -61,15 +66,14 @@ Take a look at the [final project assignment document](../assignments/final_proj
 
 Process:
 * [5 min] Read through the [final project assignment document](../assignments/final_project) and individually review your learning goals for the class and for this project. Consider -- how much time can you put into this project, in balance with your other projects? What are key skills you want to practice during this project?
-* [10 min] Write down each topic/theme you'd like to explore in this project. Consider:
+* [5 min] Write down each topic/theme you'd like to explore in this project. Consider:
    * Is there a particular robotic system you'd like to investigate?
    * Is there a particular class of algorithm you'd like to learn about?
    * Is there a particular algorithm you'd like to implement or dataset you'd like to use?
-* [10 min] Gather with 3 other folks, share your ideas, and write them on the white board -- label your clusters with themes of interest
-* [5 min] Gallery walk the room and look at the affinity clusters that are being developed; what looks interesting to you?
-* [8 min] Choose a theme that interests you and go to it in the room; with the other folks in that area, discuss your learning goals and ideas you have related to that theme
+* [5 min] Gather with 3 other folks, share your ideas, and write them on the white board -- label your clusters with themes of interest
+* [2 min] Gallery walk the room and look at the affinity clusters that are being developed; what looks interesting to you?
+* [3 min] Choose a theme that interests you and go to it in the room; with the other folks in that area, discuss your learning goals and ideas you have related to that theme
    * You're not committing to anything yet! This is about exploring some areas and project ideas of interest
-* [8 min] Pick another theme and go to it; repeat your discussions
+* [3 min] Choose another theme that interests you and go to it in the room; with the other folks in that area, discuss your learning goals and ideas you have related to that theme
    * You're not committing to anything yet! This is about exploring some areas and project ideas of interest
-* [5 min] Let's take a break; take a few minutes to quietly generate a few thoughts or responses based on your conversations so far; grab some water; and come back for team formation and proposal work-time.
 * [Last N minutes] Team up and work on your proposals!

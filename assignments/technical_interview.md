@@ -4,7 +4,6 @@ toc_sticky: true
 toc_h_max: 3
 ---
 
-# Technical Interview
 This class has a huge focus on collaborative teaming and project development; this is a hugely important skill and one that you will exercise significantly in the professional workplace. But one of the other key expectations of engineers on a team is that each is capable of being an independent contributor, and feels comfortable talking technically and exploring technical concepts deeply in conversation. This "technical interview" assignment is about getting a chance to practice these individual skills within the context of our work in CompRobo.
 
 ## Pedagogical Note

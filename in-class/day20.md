@@ -27,6 +27,7 @@ toc_data:
   * The [Project Showcase](https://canvas.olin.edu/courses/1070/assignments/20100) (final event) will be **Tuesday December 15th 8-11AM**
   * The [Final Project](https://canvas.olin.edu/courses/1070/assignments/20111) will be due **Tuesday December 15th at 7PM**
 * Review the requirements for [Broader Impacts Phase 3](../assignments/broader_impacts.md), due on **Friday December 11th at 7PM**
+* Sign-up for a [technical interview slot](../assignments/technical_interview.md) if you'd like to participate in the pilot!
 
 ## Overview: What's Ahead
 Welcome to _Day 20_ in CompRobo! As part of planning out your final projects, here is an overview of what you can expect over these last class sessions together:

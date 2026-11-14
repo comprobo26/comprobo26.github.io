@@ -27,6 +27,9 @@ toc_data:
 * Consider whether there is [feedback you'd like to share about the class](https://forms.gle/giCwA1pkr4y3e4T37)
 
 ## The Automated Labor Landscape
+
+<!-- TODO: Add the part of the labor market that is now data collection for robotic systems; may be a more interesting and topical perspective compared to automating markets in general -->
+
 _Automated labor_ refers to the process of replacing manually completed actions with technology. While it has colloquially often referred to using machinery to replace physical labor, it is increasingly used to refer to the automation of less physically-intensive tasks across sectors like marketing, customer support, and data analytics. 
 
 We're going to be focused on the slice of the automated labor landscape that specifically involves robots or robotic systems for this class. We'll be looking at both robotic technologies used in various sectors, and economic and cultural interpretation and commentary on a transition in some markets towards robotic technology.

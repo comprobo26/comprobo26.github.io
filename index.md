@@ -159,12 +159,12 @@ Note: Subject to change as the semester unfolds!
 
 ### Final Project (+ Implications of Robots Discussions)
 * [Day 20: Project Proposal Generation](in-class/day20)
-* [Day 21: Applications IV // Project Work Time](in-class/day21)
-* [Day 22: CA Lecture: Launch Files // Project Work Time](in-class/day22)
-* [Day 23: Applications V // Project Work Time](in-class/day23)
-* [Day 24: Mini-Lectures // Project Work Time](in-class/day24)
-* [Day 25: Applications VI // Project Work Time](in-class/day25)
-* [Day 26: Project Work Time](in-class/day26)
+* [Day 21: Robots in Public // Final Project Studio](in-class/day21)
+* [Day 22: Tips and Tricks // Final Project Studio](in-class/day22)
+* [Day 23: Automated Labor // Final Project Studio](in-class/day23)
+* [Day 24: Mini-Lectures // Final Project Studio](in-class/day24)
+* [Day 25: Sociotechnical Systems // Final Project Studio](in-class/day25)
+* [Day 26: Final Project Studio](in-class/day26)
 * [Day 27: Final Project Showcase and Semester Reflection](in-class/day27)
 
 ## Bonus Materials (e.g., Recitations)

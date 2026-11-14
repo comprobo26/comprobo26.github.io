@@ -31,7 +31,7 @@ So far in this class, we have framed robots as tools or extensions of human/syst
 
 Understanding the relationship between people and robots can be essential for assessing intended use, putting in reasonable protections (for person and for robot), and interrogating the future of human-robot collaboration and sociotechnical societies.
 
-Today, we'll have a look at a few examples of robots interacting with the "public" (non-robotics-engineer users or bystanders) and reflect on how people engage with these robots, and what those implications are. 
+Today, we'll have a look at a few examples of robots interacting with the "public" (non-robotics-engineer users or bystanders) and reflect on how people engage with these robots, and what those implications are. You can track your notes from this discussion [through this survey](https://forms.gle/WsidEeipyjdRbuZc9).
 
 At your table, pick one of the following robots to learn more about:
 * Trashbot: a mobile trashcan in the streets of NYC ([Video](https://www.youtube.com/watch?v=uNSYKiks96Q), [Paper](https://dl.acm.org/doi/pdf/10.1145/3731252))
